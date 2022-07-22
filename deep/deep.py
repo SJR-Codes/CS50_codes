@@ -9,7 +9,7 @@ answer = input("What is the answer to the meaning of life etc.? ")
 
 if type(answer) == "int" and int(answer) == 42:
     print("Yes")
-elif lower(answer) == "forty-two" or lower(answer) == "forty two":
+elif answer.lower() == "forty-two" or answer.lower() == "forty two":
     print("Yes")
 else:
     print("No")
