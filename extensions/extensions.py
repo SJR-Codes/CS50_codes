@@ -7,9 +7,9 @@
 
 fname = input("Enter file name: ").strip().lower()
 
-if greet[0:5] == "hello":
-    print("$0")
-elif greet[0] == "h":
+if "." in fname:
+    ext = 
+    if greet[0] == "h":
     print("$20")
 else:
-    print("$100")
+    print("application/octet-stream")
