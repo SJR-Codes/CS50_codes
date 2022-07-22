@@ -17,7 +17,7 @@ main():
         if op = "/" and y == 0:
             print("Can't compute!!!")
         else
-            print
+            print(eval(x + op + y))
     else:
         print("Can't compute!!!")
 
