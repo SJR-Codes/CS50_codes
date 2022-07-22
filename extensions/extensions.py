@@ -5,7 +5,7 @@
 """
 
 
-greet = input("Enter file name: ").strip().lower()
+fname = input("Enter file name: ").strip().lower()
 
 if greet[0:5] == "hello":
     print("$0")
