@@ -20,7 +20,7 @@ def main():
         if op == "/" and y == 0:
             print("Can't compute!!!")
         else:
-            res = float(eval(x + op + y), 1)
+            res = float(eval(x + op + y))
             print(res)
     else:
         print("Can't compute!!!")
