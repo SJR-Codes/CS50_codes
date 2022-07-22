@@ -5,7 +5,7 @@
 """
 
 
-answer = input("What is the answer to the meaning of life etc.? ")
+answer = input("What is the answer to the meaning of life etc.? ").strip()
 
 if answer.isnumeric() and int(answer) == 42:
     print("Yes")
