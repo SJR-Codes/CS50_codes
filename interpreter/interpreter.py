@@ -10,9 +10,16 @@ main():
     uinp = input("Enter your homework: ").split(" ")
 
     if uinp[0].isnumeric() and uinp[2].isnumeric() and uinp[1] in ops:
+        x = int(uinp[0])
+        y = int(uinp[2])
+        op = uinp[1]
 
+        if op = "/" and y == 0:
+            print("Can't compute!!!")
+        else
+            print
     else:
-        print("")
+        print("Can't compute!!!")
 
 
 
