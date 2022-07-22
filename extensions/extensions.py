@@ -6,13 +6,16 @@
 
 
 fname = input("Enter file name: ").strip().lower()
-known_exts = ["gif", "jpg", "jpeg", "png", "pdf", "txt", "zip"]
+img_exts = ["gif", "jpg", "jpeg", "png"]
+app_exts = ["pdf", "txt", "zip"]
 
 
 if "." in fname:
     ext = fname.split(".")
-    if ext[1] in known_exts:
-        print(ext[1])
+    if ext[1] in img_exts:
+        print("image/" + ext[1])
+    elif ext[1] in app_exts:
+        print("application/" + ext[1])
     else:
         print("application/octet-stream")
 else:
