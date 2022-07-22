@@ -7,7 +7,7 @@
 
 answer = input("What is the answer to the meaning of life etc.? ")
 
-if type(answer) == "int" and int(answer) == 42:
+if answer.isnumeric() and int(answer) == 42:
     print("Yes")
 elif answer.lower() == "forty-two" or answer.lower() == "forty two":
     print("Yes")
