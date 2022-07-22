@@ -20,7 +20,7 @@ def main():
 def convert(time):
     tmp = time.split(":")
 
-    return float(tmp[0] + (tmp[1]/60))
+    return float(int(tmp[0]) + (int(tmp[1])/60))
 
 
 if __name__ == "__main__":
