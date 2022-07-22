@@ -15,7 +15,7 @@ def main():
         y = uinp[2]
         op = uinp[1]
 
-        if op == "/" and y == 0:
+        if op == "/" and y == "0":
             print("Can't compute!!!")
         else:
             res = float(eval(x + op + y))
