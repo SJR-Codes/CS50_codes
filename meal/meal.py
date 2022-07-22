@@ -23,7 +23,7 @@ def convert(time):
     tmp = time.split(":")
 
     if "p.m." in time:
-        tmp[0] = tmp[0] + 12
+        tmp[0] = int(tmp[0]) + 12
 
     return float(int(tmp[0]) + (int(tmp[1])/60))
 
