@@ -8,7 +8,7 @@
 fname = input("Enter file name: ").strip().lower()
 
 if "." in fname:
-    ext = 
+    ext = fname.split(".")
     if greet[0] == "h":
     print("$20")
 else:
