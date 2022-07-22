@@ -9,7 +9,7 @@ fname = input("Enter file name: ").strip().lower()
 
 if "." in fname:
     ext = fname.split(".")
-    if greet[0] == "h":
-    print("$20")
+    
+    print(ext[1])
 else:
     print("application/octet-stream")
