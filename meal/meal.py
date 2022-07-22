@@ -24,6 +24,9 @@ def convert(time):
 
     if "p.m." in time:
         tmp[0] = int(tmp[0]) + 12
+        tmp[1] = tmp[1].replace(" p.m.", "")
+    elif "a.m." in time:
+        tmp[1] = tmp[1].replace(" a.m.", "")
 
     return float(int(tmp[0]) + (int(tmp[1])/60))
 
