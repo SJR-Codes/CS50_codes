@@ -11,8 +11,10 @@ def main():
     uinp = input("Enter your homework: ").split(" ")
     print(uinp)
     if uinp[0].isnumeric() and uinp[2].isnumeric() and uinp[1] in ops:
-        x = int(uinp[0])
-        y = int(uinp[2])
+        #x = int(uinp[0])
+        #y = int(uinp[2])
+        x = uinp[0]
+        y = uinp[2]
         op = uinp[1]
         print(x + op + y)
         if op == "/" and y == 0:
