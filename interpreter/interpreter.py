@@ -4,9 +4,10 @@
 * by Samu Reinikainen 22.07.2022
 """
 
-main():
+def main():
     #operands
     ops = ["+", "-", "*", "/"]
+
     uinp = input("Enter your homework: ").split(" ")
 
     if uinp[0].isnumeric() and uinp[2].isnumeric() and uinp[1] in ops:
@@ -14,10 +15,11 @@ main():
         y = int(uinp[2])
         op = uinp[1]
 
-        if op = "/" and y == 0:
+        if op == "/" and y == 0:
             print("Can't compute!!!")
-        else
-            print(eval(x + op + y))
+        else:
+            res = float(eval(x + op + y), 1)
+            print(res)
     else:
         print("Can't compute!!!")
 
