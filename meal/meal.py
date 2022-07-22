@@ -11,16 +11,19 @@ def main():
     ctime = convert(utime)
 
     if 8 >= ctime >= 7:
-        print("Breakfast")
+        print("breakfast time")
     elif 13 >= ctime >= 12:
-        print("Lunch")
+        print("lunch time")
     elif 19 >= ctime >= 18:
-        print("Dinner")
+        print("dinner time")
     else:
         pass
 
 def convert(time):
     tmp = time.split(":")
+
+    if "p.m." in time:
+        tmp[0] = tmp[0] + 12
 
     return float(int(tmp[0]) + (int(tmp[1])/60))
 
