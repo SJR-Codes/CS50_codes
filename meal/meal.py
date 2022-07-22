@@ -9,13 +9,15 @@ def main():
     utime = input("What time is it? ").strip()
 
     ctime = convert(utime)
-    print(ctime)
-"""
-    match ctime:
-        case 7:
-            print("Breakfast")
-        case
-"""
+
+    if 8 >= ctime >= 7:
+        print("Breakfast")
+    elif 13 >= ctime >= 12:
+        print("Lunch")
+    elif 19 >= ctime >= 18:
+        print("Dinner")
+    else:
+        pass
 
 def convert(time):
     tmp = time.split(":")
