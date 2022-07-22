@@ -14,12 +14,12 @@ def main():
         x = uinp[0]
         y = uinp[2]
         op = uinp[1]
-        
+
         if op == "/" and y == 0:
             print("Can't compute!!!")
         else:
             res = float(eval(x + op + y))
-            print(res)
+            print(f"{res:.1f}")
     else:
         print("Can't compute!!!")
 
