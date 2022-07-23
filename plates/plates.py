@@ -45,5 +45,7 @@ def v_nums(s):
         return True
     elif(s[-1].isalpha()):
         return False
+    else:
+        return True
 
 main()
