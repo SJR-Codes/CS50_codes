@@ -40,7 +40,7 @@ def v_chars(s):
     return s.isalnum()
 
 def v_nums(s):
-    #check that there numbers only at the end
+    #check that there's numbers only at the end
     return True
 
 main()
