@@ -10,4 +10,13 @@ def main():
     print(twitify(uinp))
 
 
-def t
+def twitify(uinp):
+    #remove vowels (A, E, I, O, and U)
+    rem_vowls = ["A","E","I","O","U"]
+    ret = ""
+
+    for x in uinp:
+        if x.upper() in rem_vowls:
+            ret +=
+
+main()
