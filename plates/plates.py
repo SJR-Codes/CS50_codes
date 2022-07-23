@@ -16,7 +16,8 @@ def is_valid(s):
     #“All vanity plates must start with at least two letters.”
     #“… vanity plates may contain a maximum of 6 characters (letters or numbers) and a minimum of 2 characters.”
     #“Numbers cannot be used in the middle of a plate; they must come at the end.
-    # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable. The first number used cannot be a ‘0’.”
+    # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable.
+    # The first number used cannot be a ‘0’.”
     #“No periods, spaces, or punctuation marks are allowed.”
 
     if v_amount(s) and v_start(s) and v_chars(s) and v_nums(s):
@@ -46,6 +47,11 @@ def v_nums(s):
     elif(s[-1].isalpha()):
         return False
     else:
+        return True
+
+def v_nozero(s):
+    #check that there's numbers only at the end
+    if(s.isalpha()):
         return True
 
 main()
