@@ -41,6 +41,9 @@ def v_chars(s):
 
 def v_nums(s):
     #check that there's numbers only at the end
-    return True
+    if(s.isalpha()):
+        return True
+    elif(s[-1].isalpha()):
+        return False
 
 main()
