@@ -16,9 +16,9 @@ def snakify(vname):
     ret = ""
     for x in vname:
         if x.isupper():
-            ret = ret + "_" + lower(x)
+            ret += "_" + x.lower()
         else:
-            ret = ret + x
+            ret += x
 
     return ret
 
