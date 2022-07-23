@@ -7,7 +7,7 @@
 def main():
     varname = input("Enter variable name: ")
 
-    varname = snakify(varname)
+    print(snakify(varname))
 
 
 def snakify(vname):
@@ -19,3 +19,6 @@ def snakify(vname):
         else:
             ret = ret + char
 
+    return ret
+
+main()
