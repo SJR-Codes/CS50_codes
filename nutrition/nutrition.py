@@ -31,4 +31,4 @@ def get_fact(x):
         "Watermelon": 80
     }
 
-    return 
+    return facts[]
