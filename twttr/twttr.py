@@ -16,7 +16,9 @@ def twitify(uinp):
     ret = ""
 
     for x in uinp:
-        if x.upper() in rem_vowls:
-            ret +=
+        if x.upper() not in rem_vowls:
+            ret += x
+
+    return ret
 
 main()
