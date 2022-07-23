@@ -27,7 +27,9 @@ def is_valid(s):
 
 def v_start(s):
     #check that first two chars are letters
-    return s[0].isalpha and s[1].isalpha
+    if s[0].isalpha and s[1].isalpha:
+        return True
+    return False
 
 def v_amount(s):
     #check that string len is 2-6
