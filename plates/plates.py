@@ -20,7 +20,7 @@ def is_valid(s):
     # The first number used cannot be a ‘0’.”
     #“No periods, spaces, or punctuation marks are allowed.”
 
-    if v_amount(s) and v_start(s) and v_chars(s) and v_nums(s):
+    if v_amount(s) and v_start(s) and v_chars(s) and v_nums(s) and v_nozero(s):
         return True
 
     return False
@@ -50,8 +50,14 @@ def v_nums(s):
         return True
 
 def v_nozero(s):
-    #check that there's numbers only at the end
+    #check that numbers dont start with zero
     if(s.isalpha()):
         return True
+
+    for x in s:
+        if x.isdigit() and (int)x > 0:
+            return True
+        elif x.isdigit() and (int)x == 0:
+            return False
 
 main()
