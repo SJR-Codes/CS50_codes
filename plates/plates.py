@@ -55,9 +55,9 @@ def v_nozero(s):
         return True
 
     for x in s:
-        if x.isdigit() and (int)x > 0:
+        if x.isdigit() and int(x) > 0:
             return True
-        elif x.isdigit() and (int)x == 0:
+        elif x.isdigit() and int(x) == 0:
             return False
 
 main()
