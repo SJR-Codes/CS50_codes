@@ -19,11 +19,13 @@ def is_valid(s):
     #“No periods, spaces, or punctuation marks are allowed.”
 
 
-def has_two_start(s):
+def v_start(s):
     #check that first two chars are letters
 
-def has_corr_amount(s):
+def v_amount(s):
     #check that string len is 2-6
     return 6 >= s.len() >= 2
+
+def v_
 
 main()
