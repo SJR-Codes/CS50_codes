@@ -1,5 +1,5 @@
 """
-* CS50P Problem Set 1
+* CS50P Problem Set 2
 * Camel Case
 * by Samu Reinikainen 23.07.2022
 """
