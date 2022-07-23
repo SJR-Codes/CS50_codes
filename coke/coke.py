@@ -15,6 +15,8 @@ def main():
             amount += change
         print("Amount due: " + str(coke_price - amount))
 
+    print("Change owed: " + str(amount - coke_price))
+
 
 
 
