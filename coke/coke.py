@@ -13,7 +13,7 @@ def main():
         change = int(input("Enter money(25c, 10c or 5c): "))
         if change in accept_change:
             amount += change
-        print("Amount due: " + str(money))
+        print("Amount due: " + str(coke_price - amount))
 
 
 
