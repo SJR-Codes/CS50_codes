@@ -19,7 +19,8 @@ def is_valid(s):
     # For example, AAA222 would be an acceptable … vanity plate; AAA22A would not be acceptable. The first number used cannot be a ‘0’.”
     #“No periods, spaces, or punctuation marks are allowed.”
 
-    if v_amount(s) and v_start(s) and v_chars(s) and v_nums(s):
+    #if v_amount(s) and v_start(s) and v_chars(s) and v_nums(s):
+    if v_start(s):
         return True
 
     return False
@@ -28,6 +29,7 @@ def is_valid(s):
 def v_start(s):
     #check that first two chars are letters
     if s[0].isalpha and s[1].isalpha:
+        print(s[0], s[1])
         return True
     return False
 
