@@ -13,11 +13,11 @@ def main():
 def snakify(vname):
     #convert string from camel case to snake case
     ret = ""
-    while char in vname:
-        if isupper(char):
-            ret = ret + "_" + lower(char)
+    while x in vname:
+        if isupper(x):
+            ret = ret + "_" + lower(x)
         else:
-            ret = ret + char
+            ret = ret + x
 
     return ret
 
