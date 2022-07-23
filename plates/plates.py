@@ -24,6 +24,6 @@ def has_two_start(s):
 
 def has_corr_amount(s):
     #check that string len is 2-6
-    return 2 <= s.len() <= 6
+    return 6 >= s.len() >= 2
 
 main()
