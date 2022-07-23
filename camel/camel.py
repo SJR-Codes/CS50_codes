@@ -15,6 +15,7 @@ def snakify(vname):
 
     ret = ""
     for x in vname:
+        #TODO: check that we are not in 1. char and just lower that without underscore
         if x.isupper():
             ret += "_" + x.lower()
         else:
