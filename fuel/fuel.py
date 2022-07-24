@@ -37,8 +37,8 @@ def check_input(fract):
 
 def fract_to_gauge(fract):
     #convert fract to gauge, ie. 3/4 = 75%
-    res = eval(fract[0] / fract[1]).round()
-
+    res = int(int(fract[0]) / int(fract[1]) * 100)
+    print(res)
 
 
 
