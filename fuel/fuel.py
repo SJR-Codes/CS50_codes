@@ -26,7 +26,7 @@ def check_input(fract):
     except ValueError:
         return False
 
-    if y < 0 or x < 0:
+    if y <= 0 or x < 0:
         print("Not valid fraction!")
 
 
