@@ -8,7 +8,7 @@ def main():
     get_input("Enter fraction (x/y, ie. 3/4): ")
 
 
-def get_input():
+def get_input(prompt):
     while True:
         try:
             x = input(prompt).split("/")
@@ -19,6 +19,7 @@ def get_input():
 
 def fract_to_gauge(fract):
     #convert fract to gauge, ie. 3/4 = 75%
+    pass
 
 
 
