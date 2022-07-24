@@ -5,15 +5,17 @@
 """
 
 def main():
-    print(get_input("Enter fraction (x/y, ie. 3/4): "))
+    x = (get_input("Enter fraction (x/y, ie. 3/4): "))
 
 
 def get_input(prompt):
     while True:
         x = input(prompt)
+
+def check_input(x):
+
         if(x.count("/") == 1):
             return x.split("/")
-
 
 
 def fract_to_gauge(fract):
