@@ -27,7 +27,9 @@ def sort_list(slist):
     for item in slist:
         x = final_list.get(item, 0)
         if x == 0:
-            
+            final_list[item] = 1
+        else:
+            final_list[item] += 1
 
 
 main()
