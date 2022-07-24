@@ -5,15 +5,14 @@
 """
 
 def main():
-    get_input("Enter fraction (x/y, ie. 3/4): ")
+    print(get_input("Enter fraction (x/y, ie. 3/4): "))
 
 
 def get_input(prompt):
     while True:
-        try:
-            return input(prompt).split("/")
-        except:
-            pass
+        x = input(prompt).split("/")
+        if x.count("/") == 1:
+            return x.split("/")
 
 
 
