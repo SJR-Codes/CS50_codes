@@ -8,8 +8,6 @@ def main():
     #print("What date is it (\"(m/d/y)\")? ", end="")
     udate = get_input("What date is it (\"(m/d/y)\")? ")
 
-    #slist.sort()
-
     print(udate)
 
 def get_input(prompt):
