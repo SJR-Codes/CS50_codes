@@ -10,8 +10,8 @@ def main():
 
 def get_input(prompt):
     while True:
-        x = input(prompt)
-        if check_input(x) != False:
+        x = check_input(input(prompt))
+        if x != False:
             return x
 
 def check_input(fract):
