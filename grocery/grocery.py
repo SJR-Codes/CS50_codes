@@ -10,9 +10,9 @@ def main():
     print(f"Total: ${price:.2f}")
 
 def get_input(prompt):
-
+    slist = []
     while True:
         try:
-            slist += input(prompt).upper()
+            slist.input(prompt).upper()
         except EOFError:
             return slist
