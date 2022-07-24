@@ -10,9 +10,9 @@ def main():
 
 def get_input(prompt):
     while True:
-        x = input(prompt).split("/")
-        if x.count("/") == 1:
-            return x.split("/")
+        x = input(prompt)
+        print(x.count("/") == 1)
+            #return x.split("/")
 
 
 
