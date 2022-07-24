@@ -5,7 +5,10 @@
 """
 
 def main():
-
+    x = input("Enter fruit: ")
+    y = get_fact(x)
+    if y > 0:
+        print("Calories:", y)
 
 def get_fact(x):
     facts = {
@@ -31,4 +34,6 @@ def get_fact(x):
         "Watermelon": 80
     }
 
-    return facts[x.title()]
+    return facts.get(x.lower().title(), 0)
+
+main()
