@@ -11,7 +11,7 @@ def main():
 def get_input(prompt):
     while True:
         try:
-            x = input(prompt).split("/")
+            return input(prompt).split("/")
         except:
             pass
 
