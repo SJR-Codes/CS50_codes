@@ -25,7 +25,9 @@ def sort_list(slist):
     slist.sort()
 
     for item in slist:
-        
+        x = final_list.get(item, 0)
+        if x == 0:
+            
 
 
 main()
