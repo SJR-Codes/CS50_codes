@@ -7,7 +7,9 @@
 def main():
     price = (get_input("What's your pleasure, sir? "))
 
-def get_input(prompt)
+    print(price)
+
+def get_input(prompt):
     price = 0
     while True:
         try:
@@ -27,6 +29,7 @@ def get_price(item):
         "Taco": 3.00,
         "Tortilla Salad": 8.00
     }
-    
+
+    return menu.get(item.lower().title(), 0)
 
 main()
