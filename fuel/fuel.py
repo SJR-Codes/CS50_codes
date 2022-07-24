@@ -6,11 +6,12 @@
 
 def main():
     x = (get_input("Enter fraction (x/y, ie. 3/4): "))
-    print(x)
+    #print(x)
 
 def get_input(prompt):
     while True:
         x = check_input(input(prompt))
+        print(x)
         if x != False:
             return x
 
@@ -30,6 +31,8 @@ def check_input(fract):
     if y <= 0 or x < 0:
         print("Not valid fraction!")
         return False
+
+    return fract
 
 
 def fract_to_gauge(fract):
