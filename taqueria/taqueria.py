@@ -5,14 +5,15 @@
 """
 
 def main():
-    x = (get_input("What's your pleasure, sir? "))
+    price = (get_input("What's your pleasure, sir? "))
 
 def get_input(prompt)
-
+    price = 0
     while True:
-        x = input(prompt)
-
-    return x
+        try:
+            price += get_price(input(prompt))
+        except EOFError:
+            return price
 
 def get_price(item):
     menu = {
@@ -26,6 +27,6 @@ def get_price(item):
         "Taco": 3.00,
         "Tortilla Salad": 8.00
     }
-
+    
 
 main()
