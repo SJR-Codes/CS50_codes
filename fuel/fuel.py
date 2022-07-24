@@ -24,10 +24,12 @@ def check_input(fract):
         x = int(fract[0])
         y = int(fract[1])
     except ValueError:
+        print("Not valid fraction!")
         return False
 
     if y <= 0 or x < 0:
         print("Not valid fraction!")
+        return False
 
 
 def fract_to_gauge(fract):
