@@ -5,10 +5,10 @@
 """
 
 def main():
+    x = (get_input("What's your pleasure, sir? "))
 
 
-
-menu = 
+menu =
 {
     "Baja Taco": 4.00,
     "Burrito": 7.50,
