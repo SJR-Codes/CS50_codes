@@ -7,7 +7,7 @@
 def main():
     price = (get_input("What's your pleasure, sir? "))
 
-    print(price)
+    print(f"Total: ${price:.2f}")
 
 def get_input(prompt):
     price = 0
