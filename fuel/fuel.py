@@ -6,7 +6,7 @@
 
 def main():
     x = (get_input("Enter fraction (x/y, ie. 3/4): "))
-
+    print(x)
 
 def get_input(prompt):
     while True:
