@@ -6,7 +6,7 @@
 
 def main():
     #print("What date is it (\"(m/d/y)\")? ", end="")
-    udate = get_input("What date is it (\"(m/d/y)\")?")
+    udate = get_input("What date is it (\"(m/d/y)\")? ")
 
     #slist.sort()
 
@@ -53,8 +53,11 @@ def conv_mon_date(udate):
     parts = udate.split(",")
     year = parts[1].strip()
     parts = parts[0].split(" ")
-    mon = parts[0].strip().lower().title()
-    day = parts[1].strip()
+    try:
+        mon = parts[0].strip().lower().title()
+        day = parts[1].strip()
+    except IndexError:
+        return False
 
     if mon not in months:
         return False
