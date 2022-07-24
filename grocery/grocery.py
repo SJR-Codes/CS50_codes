@@ -34,7 +34,7 @@ def sort_list(slist):
     return final_list
 
 def print_list(slist):
-    for x, y in thisdict.items():
-        print(x, y)
+    for x, y in slist.items():
+        print(f"{y} {x}")
 
 main()
