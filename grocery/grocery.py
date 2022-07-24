@@ -5,9 +5,9 @@
 """
 
 def main():
-    slist = (get_input("Remember to buy? "))
+    slist = sort_list(get_input("Remember to buy? ")))
 
-    slist.sort()
+    #slist.sort()
 
     print(slist)
 
@@ -18,5 +18,14 @@ def get_input(prompt):
             slist.append(input(prompt).upper())
         except EOFError:
             return slist
+
+def sort_list(slist):
+    final_list = {}
+
+    slist.sort()
+
+    for item in slist:
+        
+
 
 main()
