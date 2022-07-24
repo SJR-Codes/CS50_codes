@@ -24,8 +24,10 @@ def convert_date(udate):
 
     if udate.count("/") == 2:
         return conv_num_date(udate)
-    else:
+    elif udate.count(",") == 1:
         return conv_mon_date(udate)
+    else:
+        return False
 
 def conv_num_date(udate):
     parts = udate.split("/")
