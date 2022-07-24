@@ -1,6 +1,6 @@
 """
 * CS50P Problem Set 3
-* Fuel Gauge
+* Felipe’s Taqueria
 * by Samu Reinikainen 24.07.2022
 """
 
