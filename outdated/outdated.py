@@ -15,11 +15,11 @@ def main():
 def get_input(prompt):
     x = []
     while True:
-        udate = validate_date(input(prompt))
+        udate = convert_date(input(prompt))
         if udate != False:
-            return convert_date(udate)
+            return udate
 
-def validate_date(udate):
+def convert_date(udate):
    # 9/8/1636 or September 8, 1636, wherein the month in the latter might be any of the values in the list below:
     months = [
         "January",
