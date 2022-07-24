@@ -8,6 +8,13 @@ def main():
     x = (get_input("What's your pleasure, sir? "))
 
 def get_input(prompt)
+
+    while True:
+        x = input(prompt)
+
+    return x
+
+def get_price(item):
     menu = {
         "Baja Taco": 4.00,
         "Burrito": 7.50,
@@ -19,8 +26,6 @@ def get_input(prompt)
         "Taco": 3.00,
         "Tortilla Salad": 8.00
     }
-
-    
 
 
 main()
