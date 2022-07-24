@@ -17,7 +17,7 @@ def get_input(prompt):
 def check_input(fract):
     if(fract.count("/") == 1):
         fract = fract.split("/")
-    else
+    else:
         return False
 
     try:
@@ -25,6 +25,9 @@ def check_input(fract):
         y = int(fract[1])
     except ValueError:
         return False
+
+    if y < 0 or x < 0:
+        print("Not valid fraction!")
 
 
 def fract_to_gauge(fract):
