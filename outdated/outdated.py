@@ -15,10 +15,24 @@ def main():
 def get_input(prompt):
     x = []
     while True:
-        try:
-            input(prompt)
-        except EOFError:
-            return slist
+        if udate = convert_date(input(prompt)):
+            return udate
 
+def validate_date(udate):
+   # 9/8/1636 or September 8, 1636, wherein the month in the latter might be any of the values in the list below:
+    months = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ]
 
 main()
