@@ -13,6 +13,6 @@ def get_input(prompt):
 
     while True:
         try:
-            slist += input(prompt)
+            slist += input(prompt).upper()
         except EOFError:
             return slist
