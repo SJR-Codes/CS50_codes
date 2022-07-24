@@ -59,10 +59,10 @@ def conv_mon_date(udate):
     if mon not in months:
         return False
 
-    mon = months.index(mon)+1
+    mon = str(months.index(mon)+1)
 
     tdate = mon + "/" + day + "/" + year
 
-    print(tdate)
+    return conv_num_date(tdate)
 
 main()
