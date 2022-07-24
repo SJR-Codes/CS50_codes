@@ -5,7 +5,7 @@
 """
 
 def main():
-    print("What date is it (\"(m/d/y)\")? ")
+    print("What date is it (\"(m/d/y)\")? ", end="")
     udate = get_input("")
 
     #slist.sort()
