@@ -51,10 +51,18 @@ def conv_mon_date(udate):
     ]
 
     parts = udate.split(",")
+    year = parts[1].strip()
+    parts = parts[0].split(" ")
+    mon = parts[0].strip().lower().title()
+    day = parts[1].strip()
 
+    if mon not in months:
+        return False
 
-    #for month in months
+    mon = months.find(mon)+1
 
-    print(parts)
+    tdate = mon + "/" + day + "/" + year
+
+    print(tdate)
 
 main()
