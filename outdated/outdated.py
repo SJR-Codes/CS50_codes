@@ -6,11 +6,11 @@
 
 def main():
     print("What date is it (\"(m/d/y)\")? ")
-    odate = get_input("")
+    udate = get_input("")
 
     #slist.sort()
 
-    #print_list(slist)
+    print(udate)
 
 def get_input(prompt):
     x = []
@@ -29,7 +29,7 @@ def convert_date(udate):
 
 def conv_num_date(udate):
     parts = udate.split("/")
-    print(parts)
+    #print(parts)
 
     try:
         day = int(parts[1])
@@ -41,7 +41,7 @@ def conv_num_date(udate):
     if 31 < day < 1 or 12 < mon < 1:
         return False
 
-    return day.pad
+    return str(day).zfill(2) + "-" + str(mon).zfill(2) + "-" + str(year)
 
 
 def conv_mon_date(udate):
