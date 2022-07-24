@@ -5,14 +5,16 @@
 """
 
 def main():
-    slist = (get_input("Remembery to buy? "))
+    slist = (get_input("Remember to buy? "))
 
-    print(f"Total: ${price:.2f}")
+    print(slist)
 
 def get_input(prompt):
     slist = []
     while True:
         try:
-            slist.input(prompt).upper()
+            slist.append(input(prompt).upper())
         except EOFError:
             return slist
+
+main()
