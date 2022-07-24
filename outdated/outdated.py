@@ -5,8 +5,8 @@
 """
 
 def main():
-    print("What date is it (\"(m/d/y)\")? ", end="")
-    udate = get_input("")
+    #print("What date is it (\"(m/d/y)\")? ", end="")
+    udate = get_input("What date is it (\"(m/d/y)\")?")
 
     #slist.sort()
 
@@ -20,8 +20,6 @@ def get_input(prompt):
             return udate
 
 def convert_date(udate):
-    # 9/8/1636 or September 8, 1636, wherein the month in the latter might be any of the values in the list below:
-
     if udate.count("/") == 2:
         return conv_num_date(udate)
     elif udate.count(",") == 1:
