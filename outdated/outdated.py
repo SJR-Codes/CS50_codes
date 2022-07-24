@@ -39,7 +39,7 @@ def conv_mon_date(udate):
         "July","August","September","October","November","December"
     ]
 
-    parts = udate.split(",").strip()
+    parts = udate.split(",")
 
     #for month in months
 
