@@ -6,7 +6,7 @@
 
 def main():
     x = (get_input("Enter fraction (x/y, ie. 3/4): "))
-    fract_to_gauge(x)
+    print(fract_to_gauge(x))
 
 def get_input(prompt):
     while True:
@@ -44,8 +44,6 @@ def fract_to_gauge(fract):
     elif res >= 99:
         res = "F"
 
-    print(res)
-
-
+    return res
 
 main()
