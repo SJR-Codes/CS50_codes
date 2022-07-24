@@ -15,7 +15,8 @@ def main():
 def get_input(prompt):
     x = []
     while True:
-        if udate = validate_date(input(prompt)):
+        udate = validate_date(input(prompt)):
+        if udate != False:
             return convert_date(udate)
 
 def validate_date(udate):
