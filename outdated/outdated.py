@@ -10,7 +10,7 @@ def main():
 
     #slist.sort()
 
-    print_list(slist)
+    #print_list(slist)
 
 def get_input(prompt):
     x = []
@@ -27,10 +27,16 @@ def convert_date(udate):
     ]
 
     if udate.count("/") == 2:
-        xdate = conv_num_date(udate)
+        return conv_num_date(udate)
     else:
         for month in months:
             if month in udate:
-                xdate = conv_mon_date(udate)
+                return conv_mon_date(udate)
+
+    return False
+
+def conv_num_date(udate):
+    parts = udate.split("/")
+    print(parts)
 
 main()
