@@ -11,7 +11,7 @@ def main():
 def get_input(prompt):
     while True:
         x = check_input(input(prompt))
-        print(x)
+        #print(x)
         if x != False:
             return x
 
@@ -28,7 +28,7 @@ def check_input(fract):
         print("Value Error: Not valid fraction!")
         return False
 
-    if y <= 0: # or x < 0:
+    if y <= 0 or x < 0:
         print("Zero or Negative Number Error: Not valid fraction!")
         return False
 
