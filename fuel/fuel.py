@@ -11,11 +11,20 @@ def main():
 def get_input(prompt):
     while True:
         x = input(prompt)
+        if check_input(x) != False:
+            return x
 
-def check_input(x):
+def check_input(fract):
+    if(fract.count("/") == 1):
+        fract = fract.split("/")
+    else
+        return False
 
-        if(x.count("/") == 1):
-            return x.split("/")
+    try:
+        x = int(fract[0])
+        y = int(fract[1])
+    except ValueError:
+        return False
 
 
 def fract_to_gauge(fract):
