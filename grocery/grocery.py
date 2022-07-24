@@ -5,15 +5,14 @@
 """
 
 def main():
-    price = (get_input("What's your pleasure, sir? "))
+    slist = (get_input("Remembery to buy? "))
 
     print(f"Total: ${price:.2f}")
 
 def get_input(prompt):
-    price = 0
+
     while True:
         try:
-            price += get_price(input(prompt))
-            print(f"Total: ${price:.2f}", end=" ")
+            slist += input(prompt)
         except EOFError:
-            return price
+            return slist
