@@ -5,7 +5,7 @@
 """
 
 def main():
-    slist = sort_list(get_input("Remember to buy? ")))
+    slist = sort_list(get_input("Remember to buy? "))
 
     #slist.sort()
 
@@ -31,5 +31,6 @@ def sort_list(slist):
         else:
             final_list[item] += 1
 
+    return final_list
 
 main()
