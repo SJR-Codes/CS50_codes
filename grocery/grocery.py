@@ -9,7 +9,7 @@ def main():
 
     #slist.sort()
 
-    print(slist)
+    print_list(slist)
 
 def get_input(prompt):
     slist = []
@@ -32,5 +32,8 @@ def sort_list(slist):
             final_list[item] += 1
 
     return final_list
+
+def print_list(slist):
+    
 
 main()
