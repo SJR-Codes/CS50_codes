@@ -7,6 +7,8 @@
 def main():
     slist = (get_input("Remember to buy? "))
 
+    slist.sort()
+
     print(slist)
 
 def get_input(prompt):
