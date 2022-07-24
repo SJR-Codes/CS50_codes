@@ -22,18 +22,15 @@ def get_input(prompt):
 def convert_date(udate):
    # 9/8/1636 or September 8, 1636, wherein the month in the latter might be any of the values in the list below:
     months = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
+        "January","February","March","April","May","June",
+        "July","August","September","October","November","December"
     ]
+
+    if udate.count("/") == 2:
+        xdate = conv_num_date(udate)
+    else:
+        for month in months:
+            if month in udate:
+                xdate = conv_mon_date(udate)
 
 main()
