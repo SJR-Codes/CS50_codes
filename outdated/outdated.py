@@ -31,6 +31,18 @@ def conv_num_date(udate):
     parts = udate.split("/")
     print(parts)
 
+    try:
+        day = int(parts[1])
+        mon = int(parts[0])
+        year = int(parts[2])
+    except ValueError:
+        return False
+
+    if 31 < day < 1 or 12 < mon < 1:
+        return False
+
+    return day.pad
+
 
 def conv_mon_date(udate):
     months = [
@@ -39,6 +51,7 @@ def conv_mon_date(udate):
     ]
 
     parts = udate.split(",")
+
 
     #for month in months
 
