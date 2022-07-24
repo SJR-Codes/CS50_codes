@@ -40,7 +40,8 @@ def conv_num_date(udate):
     except ValueError:
         return False
 
-    if 31 <= day <= 1 or 12 <= mon <= 1:
+    if 1 > day > 31: # or 0 <= mon < 12:
+        print(day)
         return False
 
     return str(day).zfill(2) + "-" + str(mon).zfill(2) + "-" + str(year)
