@@ -20,8 +20,7 @@ def get_input(prompt):
             return udate
 
 def convert_date(udate):
-   # 9/8/1636 or September 8, 1636, wherein the month in the latter might be any of the values in the list below:
-
+    # 9/8/1636 or September 8, 1636, wherein the month in the latter might be any of the values in the list below:
 
     if udate.count("/") == 2:
         return conv_num_date(udate)
