@@ -16,8 +16,8 @@ fonts = figlet.getFonts()
 if len(sys.argv) == 1:
     f = r.choice(fonts)
 elif len(sys.argv) == 3:
-    if (sys.argv[1] == "-f" or sys.argv[1] == "--font") and sys.argv[1] in fonts:
-        f = sys.argv[1]
+    if (sys.argv[1] == "-f" or sys.argv[1] == "--font") and sys.argv[2] in fonts:
+        f = sys.argv[2]
     else:
         sys.exit("Invalid usage")
 else:
