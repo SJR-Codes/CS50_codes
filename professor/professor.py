@@ -12,6 +12,7 @@ def main():
     while True:
         level = get_level("Level: ")
         try:
+            level = int(level)
             generate_integer(level)
             break
         except ValueError:
