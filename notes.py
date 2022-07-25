@@ -54,3 +54,4 @@ for arg in sys.argv[1:]:
 """
 
 #packages: pypi.org
+#install with pip
