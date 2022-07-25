@@ -15,7 +15,7 @@ print(flip)
 """
 
 import random as r
-
+"""
 number = r.randint(1,10)
 
 print(number)
@@ -29,9 +29,7 @@ for card in cards:
 import statistics as s
 
 print(s.mean([100,90,90]))
-
+"""
 import sys
 
-args = sys.argv()
-
-print(args)
+print("Hello, ", sys.argv[1])
