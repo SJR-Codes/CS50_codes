@@ -7,8 +7,15 @@
 #flip = random.choice(["kruuna","klaava"])
 
 #or explicitly just one functions
-
+"""
 from random import choice
 flip = choice(["kruuna","klaava"])
 
 print(flip)
+"""
+
+import random
+
+number = random.randint(1,10)
+
+print(number)
