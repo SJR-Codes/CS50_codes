@@ -35,4 +35,4 @@ except IndexError:
 
 amount = coins_to_buy * rate
 
-print(amount)
+print(f"{amount}:,")
