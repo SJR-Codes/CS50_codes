@@ -5,7 +5,7 @@
 """
 
 import sys
-import random as r
+import random
 
 def main():
     #print("Level: ", end="")
@@ -30,7 +30,7 @@ def get_level(prompt):
 
 def generate_integer(level):
     if 3 >= level > 0:
-        return r.randint(1, (10**level)-1)
+        return random.randint(1, (10**level)-1)
     else:
         raise ValueError
 
