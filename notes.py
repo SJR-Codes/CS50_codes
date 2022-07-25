@@ -35,4 +35,4 @@ import sys
 try:
     print("Hello,", sys.argv[1])
 except IndexError:
-    print("Usage: notes.py Name")
+    print("Usage: notes.py Name or \"First name Last name\"")
