@@ -31,8 +31,16 @@ import statistics as s
 print(s.mean([100,90,90]))
 """
 import sys
-
+"""
 try:
     print("Hello,", sys.argv[1])
 except IndexError:
     print("Usage: notes.py Name or \"First name Last name\"")
+"""
+
+if len(sys.argv) < 2:
+    sys.exit("Too few args")
+if len(sys.argv) > 2:
+    sys.exit("Too many args")
+
+print("Hello,", sys.argv[1])
