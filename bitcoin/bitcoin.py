@@ -20,6 +20,11 @@ url = "https://api.coindesk.com/v1/bpi/currentprice.json"
 try:
     response = r.get(url)
 except requests.RequestException:
-    ...
+    sys.exit("Error connecting to coindesk.com!")
 
-"""
+#    "bpi":{"USD":{"code":"USD","symbol":"&#36;","rate":"21,818.6220"
+
+try:
+    print(response["bpi"]["USD"]["rate"])
+except IndexError:
+    sys.exit("Error: rate not available!")
