@@ -6,7 +6,7 @@
 
 import sys
 import json
-import requests as r
+import requests
 
 if len(sys.argv) != 2:
     sys.exit("Missing command-line argument")
@@ -18,7 +18,7 @@ except ValueError:
 url = "https://api.coindesk.com/v1/bpi/currentprice.json"
 
 try:
-    response = r.get(url)
+    response = requests.get(url)
 except requests.RequestException:
     sys.exit("Error connecting to coindesk.com!")
 
