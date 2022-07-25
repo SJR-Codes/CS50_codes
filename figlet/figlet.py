@@ -10,11 +10,17 @@ from pyfiglet import Figlet
 
 figlet = Figlet()
 #You can then get a list of available fonts with code like this:
-
 fonts = figlet.getFonts()
+print(fonts)
+"""
+if len(sys.argv) == 0:
+    font = fonts[]
+elif len(sys.argv) == 2:
 
 #You can set the font with code like this, wherein f is the font’s name as a str:
 figlet.setFont(font=f)
 
 #And you can output text in that font with code like this, wherein s is that text as a str:
 print(figlet.renderText(s))
+
+"""
