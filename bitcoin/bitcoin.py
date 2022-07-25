@@ -24,7 +24,13 @@ except requests.RequestException:
 
 #    "bpi":{"USD":{"code":"USD","symbol":"&#36;","rate":"21,818.6220"
 
+o = response.json()
+
 try:
-    print(response["bpi"]["USD"]["rate"])
+    rate = float((o["bpi"]["USD"]["rate"]))
+except ValueError:
+    sys.exit("Error: Rate not float!")
 except IndexError:
     sys.exit("Error: rate not available!")
+
+
