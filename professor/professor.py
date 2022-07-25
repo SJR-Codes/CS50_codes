@@ -34,9 +34,6 @@ def generate_integer(level):
     else:
         raise ValueError
 
-def de_generate_integer(level):
-        return r.randint(1, (10**level)-1)
-
 def generate_guestions(level):
     guestions = []
     for x in range(10):
