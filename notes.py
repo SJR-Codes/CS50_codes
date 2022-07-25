@@ -38,9 +38,14 @@ except IndexError:
     print("Usage: notes.py Name or \"First name Last name\"")
 """
 
+"""
 if len(sys.argv) < 2:
     sys.exit("Too few args")
 if len(sys.argv) > 2:
     sys.exit("Too many args")
 
 print("Hello,", sys.argv[1])
+"""
+
+for arg in sys.argv:
+    print("Hello,", arg)
