@@ -20,7 +20,8 @@ def main():
 def get_level(prompt):
     while True:
         try:
-            level = generate_integer(int(input(prompt)))
+            level = int(input(prompt))
+            if 3 >= level > 0:
             break
         except ValueError:
             continue
