@@ -6,4 +6,4 @@
 
 import emoji as e
 
-print(e.emojize(input("Enter text to emojize: "))
+print(e.emojize(input("Enter text to emojize: ")))
