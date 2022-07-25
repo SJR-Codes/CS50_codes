@@ -1,7 +1,7 @@
 """
 * CS50P Problem Set 3
 * Debugging
-* by Samu Reinikainen 24.07.2022
+* by Samu Reinikainen 25.07.2022
 """
 
 def main():
