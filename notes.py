@@ -66,5 +66,13 @@ if len(sys.argv) == 2:
 
 #APIs
 import requests as r
+import sys
 
-url = "https://itunes."
+if len(sys.argv) != 2:
+    sys.exit("Enter argument")
+
+url = "https://itunes.apple.com/search?entity=song&limit=1&term=" + sys.argv[1]
+
+response = r.get(url)
+
+print(response.json())
