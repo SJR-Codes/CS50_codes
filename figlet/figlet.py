@@ -5,7 +5,7 @@
 """
 
 import sys
-import random AS r
+import random as r
 from pyfiglet import Figlet
 
 figlet = Figlet()
@@ -27,5 +27,5 @@ else:
 figlet.setFont(font=f)
 
 #And you can output text in that font with code like this, wherein s is that text as a str:
-print(figlet.renderText(input()))
+print(figlet.renderText(input("What to print: ")))
 
