@@ -5,3 +5,6 @@
 """
 import random
 
+flip = random.choice(["kruuna","klaava"])
+
+print(flip)
