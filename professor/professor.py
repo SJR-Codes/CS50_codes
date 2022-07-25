@@ -31,8 +31,14 @@ def get_level(prompt):
 
 def generate_integer(level):
     if 3 >= level > 0:
-        start = level
-        return random.randint(0, (10**level)-1)
+        match level:
+            case 1:
+                start = 0
+            case 2:
+                start = 10
+            case 3:
+                start = 100
+        return random.randint(start, (10**level)-1)
     else:
         raise ValueError
 
