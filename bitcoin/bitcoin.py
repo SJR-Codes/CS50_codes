@@ -34,6 +34,6 @@ except IndexError:
     sys.exit("Error: rate not available!")
 
 amount = coins_to_buy * rate
-amount = '{:,}'.format(amount)
+amount = '{:,4f}'.format(amount)
 
 print(amount)
