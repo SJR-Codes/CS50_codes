@@ -44,11 +44,8 @@ def generate_guestions(level):
     return guestions
 
 def generate_guestion(level):
-        x = de_generate_integer(level)
-        y = de_generate_integer(level)
-    except ValueError:
-        #sys.exit("Level can only be 1, 2 or 3!")
-        sys.exit()
+    x = de_generate_integer(level)
+    y = de_generate_integer(level)
 
     return str(x) + " + " + str(y)
 
