@@ -4,8 +4,11 @@
 * by Samu Reinikainen 25.07.2022
 """
 #import random
-from random import choice
+#flip = random.choice(["kruuna","klaava"])
 
-flip = random.choice(["kruuna","klaava"])
+#or explicitly just one functions
+
+from random import choice
+flip = choice(["kruuna","klaava"])
 
 print(flip)
