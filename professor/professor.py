@@ -22,7 +22,7 @@ def get_level(prompt):
         try:
             level = int(input(prompt))
             if 3 >= level > 0:
-            break
+                break
         except ValueError:
             continue
 
@@ -30,7 +30,7 @@ def get_level(prompt):
 
 def generate_integer(level):
     if 3 >= level > 0:
-        return level
+        return r.randint(1, (10**level)-1)
     else:
         raise ValueError
 
@@ -45,8 +45,8 @@ def generate_guestions(level):
     return guestions
 
 def generate_guestion(level):
-    x = de_generate_integer(level)
-    y = de_generate_integer(level)
+    x = generate_integer(level)
+    y = generate_integer(level)
 
     return str(x) + " + " + str(y)
 
