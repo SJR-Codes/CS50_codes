@@ -33,6 +33,6 @@ print(s.mean([100,90,90]))
 import sys
 
 try:
-    print("Hello, ", sys.argv[1])
+    print("Hello,", sys.argv[1])
 except IndexError:
     print("Usage: notes.py Name")
