@@ -86,5 +86,13 @@ for result in o["results"]:
 
 
 #PEP 8
+"""
+can use
 
-use pylint
+pip install pylint
+or
+pycodestyle.pycqa.com
+or
+pip install black
+
+"""
