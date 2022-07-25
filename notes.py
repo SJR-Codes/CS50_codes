@@ -67,4 +67,4 @@ if len(sys.argv) == 2:
 #APIs
 import requests as r
 
-
+url = "https://itunes."
