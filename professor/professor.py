@@ -9,16 +9,32 @@ import random
 
 def main():
     #print("Level: ", end="")
-    level = get_level("Level: ")
+    while True:
+        level = get_level("Level: ")
+        try:
+            generate_integer(level)
+            break
+        except ValueError:
+            continue
 
     sys.exit("6 + 6 = ")
 
 def get_level(prompt):
-    while True:
-        try:
-            return int(input(prompt))
-        except ValueError:
-            continue
+    return input(prompt)
+
+def generate_integer(level):
+    if 3 >= level > 0:
+        match level:
+            case 1:
+                start = 0
+            case 2:
+                start = 10
+            case 3:
+                start = 100
+        return random.randint(start, (10**level)-1)
+    else:
+        raise ValueError
+
 
 if __name__ == "__main__":
     main()
