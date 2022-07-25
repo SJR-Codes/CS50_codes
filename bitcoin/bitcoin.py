@@ -22,8 +22,6 @@ try:
 except requests.RequestException:
     sys.exit("Error connecting to coindesk.com!")
 
-#    "bpi":{"USD":{"code":"USD","symbol":"&#36;","rate":"21,818.6220"
-
 o = response.json()
 
 try:
@@ -34,6 +32,6 @@ except IndexError:
     sys.exit("Error: rate not available!")
 
 amount = coins_to_buy * rate
-amount = '{:,4f}'.format(amount)
+amount = '{:,.4f}'.format(amount)
 
 print(amount)
