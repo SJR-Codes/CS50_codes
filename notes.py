@@ -55,3 +55,9 @@ for arg in sys.argv[1:]:
 
 #packages: pypi.org
 #install with pip
+
+import cowsay as c
+import sys
+
+if len(sys.argv) == 2:
+    c.cow("Hello, " + sys.argv[1])
