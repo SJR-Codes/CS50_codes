@@ -9,11 +9,11 @@ import json
 import requests as r
 
 if len(sys.argv) != 2:
-    sys.exit("Error: Argument missing!")
+    sys.exit("Missing command-line argument")
 try:
     coins = float(sys.argv[1])
 except ValueError:
-    sys.exit("Error: Argument not float!")
+    sys.exit("Command-line argument is not a number")
 
 url = "https://api.coindesk.com/v1/bpi/currentprice.json"
 
