@@ -11,7 +11,7 @@ import requests as r
 if len(sys.argv) != 2:
     sys.exit("Missing command-line argument")
 try:
-    coins = float(sys.argv[1])
+    coins_to_buy = float(sys.argv[1])
 except ValueError:
     sys.exit("Command-line argument is not a number")
 
@@ -33,6 +33,6 @@ except ValueError:
 except IndexError:
     sys.exit("Error: rate not available!")
 
-amount = 
+amount = coins_to_buy * rate
 
-print()
+print(amount)
