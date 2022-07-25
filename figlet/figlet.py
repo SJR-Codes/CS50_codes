@@ -13,9 +13,9 @@ figlet = Figlet()
 fonts = figlet.getFonts()
 #print(fonts)
 
-if len(sys.argv) == 0:
-    f = r.choise(fonts)
-elif len(sys.argv) == 2:
+if len(sys.argv) == 1:
+    f = r.choice(fonts)
+elif len(sys.argv) == 3:
     if (sys.argv[1] == "-f" or sys.argv[1] == "--font") and sys.argv[1] in fonts:
         f = sys.argv[1]
     else:
