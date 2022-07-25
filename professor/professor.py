@@ -16,9 +16,8 @@ def main():
 
 def get_level(prompt):
     while True:
-        level = input(prompt)
         try:
-            level = int(level)
+            level = int(input(prompt))
         except ValueError:
             continue
         else:
