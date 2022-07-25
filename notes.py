@@ -25,3 +25,9 @@ cards = ["Jack", "Queen", "King", "Ace"]
 r.shuffle(cards)
 for card in cards:
     print(card)
+
+import statistics as s
+
+print(s.mean([100,90,90]))
+
+import command_line as cl
