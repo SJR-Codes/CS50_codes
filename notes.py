@@ -14,8 +14,14 @@ flip = choice(["kruuna","klaava"])
 print(flip)
 """
 
-import random
+import random as r
 
-number = random.randint(1,10)
+number = r.randint(1,10)
 
 print(number)
+
+cards = ["Jack", "Queen", "King", "Ace"]
+print(cards)
+r.shuffle(cards)
+for card in cards:
+    print(card)
