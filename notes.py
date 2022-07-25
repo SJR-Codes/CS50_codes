@@ -87,3 +87,4 @@ for result in o["results"]:
 
 #PEP 8
 
+use pylint
