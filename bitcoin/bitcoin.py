@@ -27,10 +27,12 @@ except requests.RequestException:
 o = response.json()
 
 try:
-    rate = float((o["bpi"]["USD"]["rate"]))
+    rate = float((o["bpi"]["USD"]["rate"].replace(",","")))
 except ValueError:
     sys.exit("Error: Rate not float!")
 except IndexError:
     sys.exit("Error: rate not available!")
 
+amount = 
 
+print()
