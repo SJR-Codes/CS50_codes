@@ -11,12 +11,15 @@ from pyfiglet import Figlet
 figlet = Figlet()
 #You can then get a list of available fonts with code like this:
 fonts = figlet.getFonts()
-print(fonts)
+#print(fonts)
 
 if len(sys.argv) == 0:
     f = choise(fonts)
-elif len(sys.argv) == 2 and (sys.argv[1] == "-f" or sys.argv[1] == "--font"):
-    f = sys.argv[1]
+elif len(sys.argv) == 2:
+    if (sys.argv[1] == "-f" or sys.argv[1] == "--font") and sys.argv[1] in fonts:
+        f = sys.argv[1]
+    else:
+        sys.exit("Invalid usage")
 else:
     sys.exit("Invalid usage")
 
@@ -24,5 +27,5 @@ else:
 figlet.setFont(font=f)
 
 #And you can output text in that font with code like this, wherein s is that text as a str:
-print(figlet.renderText(s))
+print(figlet.renderText(input()))
 
