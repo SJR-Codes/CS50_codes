@@ -10,7 +10,7 @@ def main():
 
 def pyramid(h):
     for i in range(h):
-        print("#" * i)
+        print("#" * (i+1))
 
 if __name__ == "__main__":
     main()
