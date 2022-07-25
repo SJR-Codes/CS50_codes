@@ -26,7 +26,7 @@ def get_level(prompt):
             #else:
             #    continue
         except ValueError:
-            pass
+            continue
             #sys.exit("Level can only be 1, 2 or 3!")
             #sys.exit()
 
