@@ -32,4 +32,7 @@ print(s.mean([100,90,90]))
 """
 import sys
 
-print("Hello, ", sys.argv[1])
+try:
+    print("Hello, ", sys.argv[1])
+except IndexError:
+    print("Usage: notes.py Name")
