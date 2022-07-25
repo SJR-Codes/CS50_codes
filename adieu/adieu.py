@@ -3,20 +3,25 @@
 * Adieu, Adieu
 * by Samu Reinikainen 25.07.2022
 """
+import inflect
+
+p = inflect.engine()
 
 def main():
-    #slist = sort_list(get_input("Remember to buy? "))
-    slist = sort_list(get_input(""))
-
-    #slist.sort()
-
-    print_list(slist)
+    #print("Name: ")
+    names = say_adieu(get_input(""))
 
 def get_input(prompt):
-    slist = []
+    names = []
     while True:
         try:
-            slist.append(input(prompt).upper())
+            names.append(input(prompt).lower().title())
         except EOFError:
-            return slist
+            return names
 
+def say_adieu(names):
+    adieu = p.join(names)
+
+    print("Adieu, adieu, to " + adieu)
+
+main()
