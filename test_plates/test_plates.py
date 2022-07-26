@@ -6,4 +6,8 @@
 
 from plates import is_valid
 
-
+def test_str_lenghth():
+    assert is_valid("AAAAAA") == True
+    assert is_valid("AA") == True
+    assert is_valid("AAAAAAAA") == False
+    assert is_valid("A") == False
