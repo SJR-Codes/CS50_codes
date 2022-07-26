@@ -10,7 +10,7 @@ def main():
 
 def value(greet):
     greet = str(greet).lower()
-    if len(greet) < 1 or len(greet) > 5:
+    if len(greet) < 1: # or len(greet) > 5:
         return 100
 
     if greet[0:5] == "hello":
