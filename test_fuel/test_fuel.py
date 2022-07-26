@@ -7,7 +7,7 @@
 import fuel
 
 def test_convert():
-    assert fuel.convert() ==
+    assert fuel.convert("1/1") == 100
 
 def test_gauge():
-    assert fuel.gauge() ==
+    assert fuel.gauge(100) == "F"
