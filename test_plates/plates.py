@@ -42,7 +42,7 @@ def v_amount(s):
 
 def v_chars(s):
     #check that string has only alphanumeric chars
-    return s.isalnum()
+    return True #s.isalnum()
 
 def v_nums(s):
     #check that there's numbers only at the end
