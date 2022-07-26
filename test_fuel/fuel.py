@@ -15,6 +15,9 @@ def convert(fract):
         #print("Value Error: Not valid fraction!")
         return False
 
+    if y == 0:
+        raise ZeroDivisionError
+
     if y <= 0 or x < 0 or x > y:
         #print("Zero or Negative Number Error: Not valid fraction!")
         return False
