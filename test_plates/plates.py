@@ -38,7 +38,7 @@ def v_start(s):
 
 def v_amount(s):
     #check that string len is 2-6
-    return 6 >= len(s) >= 1
+    return 6 >= len(s) >= 2
 
 def v_chars(s):
     #check that string has only alphanumeric chars
