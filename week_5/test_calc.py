@@ -1,11 +1,12 @@
 from calc import square
-
+"""
 def main():
     test_square()
 
     print("All tests run.")
+"""
 
-def test_square():
+#def test_square():
     """
     if square(2) != 4:
         print("Error: 2 squared != 4")
@@ -37,6 +38,9 @@ def test_square():
     """
 
     #pytest
+
+def test_square():
+    
 
 if __name__ == "__main__":
     main()
