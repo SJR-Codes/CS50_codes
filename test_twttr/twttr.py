@@ -16,7 +16,7 @@ def shorten(uinp):
     ret = ""
 
     try:
-        str(uinp)
+        uinp = str(uinp)
     except TypeError:
         return ret
 
