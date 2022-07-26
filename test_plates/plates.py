@@ -38,7 +38,7 @@ def v_start(s):
 
 def v_amount(s):
     #check that string len is 2-6
-    return 6 >= len(s) >= 2
+    return 6 >= len(s) >= 1
 
 def v_chars(s):
     #check that string has only alphanumeric chars
@@ -69,4 +69,5 @@ def v_nozero(s):
         elif x.isdigit() and int(x) == 0:
             return False
 
-main()
+if __name__ == "__main__":
+    main()
