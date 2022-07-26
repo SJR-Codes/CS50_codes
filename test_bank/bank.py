@@ -12,7 +12,7 @@ def value(greet):
     if greet[0:5] == "hello":
         return 0
     elif greet[0] == "h":
-        return 2
+        return 20
     else:
         return 100
 
