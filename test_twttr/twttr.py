@@ -16,7 +16,8 @@ def shorten(uinp):
     ret = ""
 
     for x in uinp:
-        if x.upper() not in rem_vowls:
+        #if x.upper() not in rem_vowls:
+        if x not in rem_vowls:
             ret += x
 
     return ret
