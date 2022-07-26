@@ -7,10 +7,10 @@
 def main():
     uinp = input("Say what? ")
 
-    print(twitify(uinp))
+    print(shorten(uinp))
 
 
-def twitify(uinp):
+def shorten(uinp):
     #remove vowels (A, E, I, O, and U)
     rem_vowls = ["A","E","I","O","U"]
     ret = ""
@@ -21,4 +21,5 @@ def twitify(uinp):
 
     return ret
 
-main()
+if __name__ == "__main__":
+    main()
