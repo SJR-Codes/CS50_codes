@@ -4,4 +4,10 @@
 * by Samu Reinikainen 26.07.2022
 """
 
-from fuel import 
+import fuel
+
+def test_convert():
+    assert fuel.convert() ==
+
+def test_gauge():
+    assert fuel.gauge() ==
