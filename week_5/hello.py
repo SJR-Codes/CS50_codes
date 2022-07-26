@@ -1,8 +1,9 @@
 def main():
-    hello(input("Who you? "))
+    print(hello(input("Who you? ")))
 
 def hello(to="world"):
-    print("Hello,", to)
+    #print("Hello,", to)
+    return f"Hello, {to}"
 
 if __name__ == "__main__":
     main()
