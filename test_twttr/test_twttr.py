@@ -1,4 +1,5 @@
 from twttr import shorten
+import pytest
 
 def test_words():
     assert shorten("Twitter") == "Twttr"
@@ -17,4 +18,9 @@ def test_words_with_y_uppper():
     assert shorten("TweEtY") == "TwtY"
 
 def test_numeric():
-    assert shorten(0) == 0
+    with pytest.raises(TypeError):
+        assert shorten(666)
+
+def test_empty():
+    with pytest.raises(TypeError):
+        assert shorten()
