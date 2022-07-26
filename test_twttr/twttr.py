@@ -10,12 +10,17 @@ def main():
     print(shorten(uinp))
 
 
-def shorten(uinp=""):
+def shorten(uinp):
     #remove vowels (A, E, I, O, and U)
     rem_vowls = ["A","E","I","O","U"]
     ret = ""
 
-    for x in str(uinp):
+    try:
+        str(uinp)
+    except TypeError:
+        return ret
+
+    for x in uinp:
         if x.upper() not in rem_vowls:
             ret += x
 
