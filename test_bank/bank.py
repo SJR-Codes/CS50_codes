@@ -10,11 +10,11 @@ def main():
 
 def value(greet):
     if greet[0:5] == "hello":
-        return "0"
+        return 0
     elif greet[0] == "h":
-        return "20"
+        return 2
     else:
-        return "100"
+        return 100
 
 
 if __name__ == "__main__":
