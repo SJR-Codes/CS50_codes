@@ -9,5 +9,9 @@ def test_words_with_y():
     assert shorten("Tweety") == "Twty"
 
 def test_words_upper():
-    assert shorten("Twitter") == "Twttr"
-    assert shorten("Tweet") == "Twt"
+    assert shorten("TwIttEr") == "Twttr"
+    assert shorten("TwEEt") == "Twt"
+
+def test_words_with_y_uppper():
+    assert shorten("TIttY") == "TttY"
+    assert shorten("TweEtY") == "TwtY"
