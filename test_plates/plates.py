@@ -19,6 +19,11 @@ def is_valid(s):
     # The first number used cannot be a ‘0’.”
     #“No periods, spaces, or punctuation marks are allowed.”
 
+    try:
+        s = str(s)
+    except ValueError:
+        return False
+
     if v_amount(s) and v_start(s) and v_chars(s) and v_nums(s) and v_nozero(s):
         return True
 
