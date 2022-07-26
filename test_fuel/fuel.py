@@ -9,21 +9,21 @@ def convert(fract):
     else:
         raise ValueError
 
-    if is_digit(fract[0]):
+    if fract[0].isdigit():
         x = int(fract[0])
     else:
         raise ValueError
 
-    if is_digit(fract[1]):
+    if fract[1].isdigit():
         y = int(fract[1])
     else:
         raise ValueError
 
-    if y < x:
-        raise ValueError
-
     if y == 0:
         raise ZeroDivisionError
+
+    if x > y:
+        raise ValueError
 
     return round(x / y * 100)
 
