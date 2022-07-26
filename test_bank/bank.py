@@ -10,6 +10,9 @@ def main():
 
 def value(greet):
     greet = str(greet).lower()
+    if len(greet) < 1:
+        return 100
+
     if greet[0:5] == "hello":
         return 0
     elif greet[0] == "h":
