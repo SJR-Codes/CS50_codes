@@ -28,7 +28,6 @@ def convert(fract):
     return round(x / y * 100)
 
 def gauge(percentage):
-    return "X"
     try:
         percentage = int(percentage)
     except ValueError:
