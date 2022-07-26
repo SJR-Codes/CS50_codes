@@ -1,5 +1,6 @@
 def main():
-    ...
+    x = (input("Enter fraction (x/y, ie. 3/4): "))
+    print(gauge(convert(x)))
 
 
 def convert(fract):
@@ -8,32 +9,37 @@ def convert(fract):
     else:
         raise ValueError
 
-    try:
+    if is_digit(fract[0]):
         x = int(fract[0])
+    else:
+        raise ValueError
+
+    if is_digit(fract[1]):
         y = int(fract[1])
-    except ValueError:
-        #print("Value Error: Not valid fraction!")
-        return False
+    else:
+        raise ValueError
+
+    if y < x:
+        raise ValueError
 
     if y == 0:
         raise ZeroDivisionError
 
-    if y <= 0 or x < 0 or x > y:
-        #print("Zero or Negative Number Error: Not valid fraction!")
-        return False
-
-    return fract
+    return round(x / y * 100)
 
 def gauge(percentage):
-    #convert fract to gauge, ie. 3/4 = 75%
-    res = round(int(fract[0]) / int(fract[1]) * 100)
 
-    if res <= 1:
+    try:
+        percentage = int(percentage)
+    except ValueError:
+        return ""
+
+    if percentage <= 1:
         res = "E"
-    elif res >= 99:
+    elif percentage >= 99:
         res = "F"
     else:
-        res = str(res) + "%"
+        res = str(percentage) + "%"
 
     return res
 
