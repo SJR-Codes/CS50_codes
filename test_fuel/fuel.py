@@ -6,7 +6,7 @@ def convert(fract):
     if(fract.count("/") == 1):
         fract = fract.split("/")
     else:
-        return False
+        raise ValueError
 
     try:
         x = int(fract[0])
