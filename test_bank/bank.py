@@ -5,11 +5,11 @@
 """
 
 def main():
-    print("$" + value(input("Greetings: ").lower()))
+    print("$" + value(input("Greetings: ")))
 
 
 def value(greet):
-    greet = str(greet)
+    greet = str(greet).lower()
     if greet[0:5] == "hello":
         return 0
     elif greet[0] == "h":
