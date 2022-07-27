@@ -21,6 +21,7 @@ pizzas = []
 try:
     with open("names.csv") as file:
         reader = csv.DictReader(file)
+        headers = list(reader.keys())
         for row in reader:
             #students.append({"name": row["name"], "foo": row["foo"]})
             pizzas.append(row)
