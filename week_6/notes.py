@@ -20,13 +20,25 @@ def main():
     #file.close()
 
     #pythonic way
-    with open(filen) as file:
+    with open(filen, "a") as file:
         file.write(name + "\n")
+
+    readfile()
+"""
+def readfile():
+    filen = "names.txt"
+    with open(filen, "r") as file:
+        lines = file.readlines()
+
+    for line in lines:
+        print(f"Hello, {line}", end="")
+"""
 
 def readfile():
     filen = "names.txt"
-    with open(filen) as file:
-        file.write(name + "\n")
+    with open(filen, "r") as file:
+        for line in file:
+            print("Hello, ", line.rstrip())
 
 if __name__ == "__main__":
     main()
