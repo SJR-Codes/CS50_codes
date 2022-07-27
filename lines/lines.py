@@ -6,10 +6,16 @@
 
 import sys
 
+if len(sys.argv < 2):
+    sys.exit("Too few command-line arguments")
+elif len(sys.argv > 2):
+    sys.exit("Too many command-line arguments")
+
+ext = 
+
+
 try:
     f = open(sys.argv[1], "r")
-except IndexError:
-    sys.exit("Enter filename.")
 except FileError:
     sys.exit("Enter filename.")
 
