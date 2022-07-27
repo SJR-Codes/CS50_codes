@@ -9,10 +9,12 @@ def main():
 
     for _ in range(3):
         name = input("Your name: ")
-        print(f"Hello, {name}")
         names.append(name)
 
-    print(names)
+    for name in sorted(names):
+        print(f"Hello, {name}")
+
+    open
 
 if __name__ == "__main__":
     main()
