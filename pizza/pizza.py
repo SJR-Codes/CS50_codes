@@ -22,11 +22,11 @@ headers = []
 try:
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
-        #headers = list(reader.keys())
+        headers = reader.keys()
         for row in reader:
             pizzas.append(row)
 except FileNotFoundError:
     sys.exit("File does not exist")
 
 print(pizzas)
-print(tabulate(pizzas, tablefmt="grid"))
+print(tabulate(pizzas, headers, tablefmt="grid"))
