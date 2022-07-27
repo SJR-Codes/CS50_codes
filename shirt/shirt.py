@@ -15,15 +15,15 @@ elif len(sys.argv) > 3:
 
 #check that we handle only "jpg", "jpeg","png" files
 valid_exts = ["jpg", "jpeg","png"]
-intmp = sys.argv[1].lower().rsplit()
-if intmp[0] not in valid_exts:
+intmp = sys.argv[1].lower().rsplit(".")
+if intmp[1] not in valid_exts:
     sys.exit("Invalid file format")
 
-outtmp = sys.argv[2].lower().rsplit()
-if outtmp[0] not in valid_exts:
+outtmp = sys.argv[2].lower().rsplit(".")
+if outtmp[1] not in valid_exts:
     sys.exit("Invalid output")
 
-if intmp != outmp:
+if intmp != outtmp:
     sys.exit("Input and output have different extensions")
 
 try:
