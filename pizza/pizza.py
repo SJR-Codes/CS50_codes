@@ -19,7 +19,7 @@ elif not sys.argv[1].endswith(".csv"):
 
 pizzas = []
 try:
-    with open("names.csv") as file:
+    with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         headers = list(reader.keys())
         for row in reader:
