@@ -17,6 +17,7 @@ elif len(sys.argv) > 2:
 elif not sys.argv[1].endswith(".csv"):
     sys.exit("Not a CSV file")
 
+pizzas = []
 try:
     with open("names.csv") as file:
         reader = csv.DictReader(file)
@@ -26,3 +27,4 @@ try:
 except FileNotFoundError:
     sys.exit("File does not exist")
 
+print(tabulate(pizzas, headers, tablefmt="grid"))
