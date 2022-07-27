@@ -54,6 +54,7 @@ def readfile():
         print(f"Hello, {name.title()}")
 
     """
+    """
     lines = []
     with open(filen, "r") as file:
         for line in file:
@@ -65,9 +66,20 @@ def readfile():
 
         #print(f"Hello, {row[0].title()} from {row[1]}")
         print(f"Hello, {name.title()} from {foo}")
+    """
 
+    students = [] # empty list
 
+    with open(filen, "r") as file:
+        for line in file:
+            name, foo = line.rstrip().split(",")
+            student = {} #empty dict
+            student["name"] = name
+            student["foo"] = foo
+            students.append(student)
 
+    for student in students:
+        print(f"{student['name']} from {student['foo']}")
 
 if __name__ == "__main__":
     main()
