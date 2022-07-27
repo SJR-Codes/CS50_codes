@@ -24,7 +24,8 @@ except FileError:
 lcount = 0
 
 for line in f:
-    if line.strip() != "" or line.strip()[0] != "#":
+    line = line.strip()
+    if line != "" and line[0] != "#":
         lcount += 1
 
 print(lcount)
