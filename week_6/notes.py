@@ -15,8 +15,8 @@ def main():
     #    print(f"Hello, {name}")
 
     filen = "names.txt"
-    file = open(filen, "w")
-    file.write(name)
+    file = open(filen, "a") #w = write, a = append
+    file.write(name + "\n")
     file.close
 
 if __name__ == "__main__":
