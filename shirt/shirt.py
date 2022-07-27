@@ -33,3 +33,4 @@ except FileNotFoundError:
 
 shirt = Image.open("shirt.png")
 
+print(list(image.getdata()))
