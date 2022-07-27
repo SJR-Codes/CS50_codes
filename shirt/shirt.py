@@ -15,19 +15,19 @@ elif len(sys.argv) > 3:
 
 #check that we handle only "jpg", "jpeg","png" files
 valid_exts = ["jpg", "jpeg","png"]
-intmp = sys.argv[1].lower().rsplit(".")
-if intmp[1] not in valid_exts:
+intmp = sys.argv[1].lower().split(".")
+if intmp[-1] not in valid_exts:
     sys.exit("Invalid file format")
 
-outtmp = sys.argv[2].lower().rsplit(".")
-if outtmp[1] not in valid_exts:
+outtmp = sys.argv[2].lower().split(".")
+if outtmp[-1] not in valid_exts:
     sys.exit("Invalid output")
 
-if intmp != outtmp:
+if intmp[-1] != outtmp[-1]:
     sys.exit("Input and output have different extensions")
 
 try:
-    image = Image.open(arg)
+    image = Image.open(sys.argv[1])
 except FileNotFoundError:
     sys.exit("Input does not exist")
 
