@@ -18,10 +18,11 @@ elif not sys.argv[1].endswith(".csv"):
     sys.exit("Not a CSV file")
 
 pizzas = []
+headers = []
 try:
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
-        headers = list(reader.keys())
+        #headers = list(reader.keys())
         for row in reader:
             pizzas.append(row)
 except FileNotFoundError:
