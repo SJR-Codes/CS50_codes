@@ -10,14 +10,14 @@ if len(sys.argv < 2):
     sys.exit("Too few command-line arguments")
 elif len(sys.argv > 2):
     sys.exit("Too many command-line arguments")
-
-ext = 
+elif not sys.argv[1].endswith(".py")
+    sys.exit("Not a Python file")
 
 
 try:
     f = open(sys.argv[1], "r")
 except FileError:
-    sys.exit("Enter filename.")
+    sys.exit("File does not exist")
 
 lcount = 0
 
