@@ -37,7 +37,7 @@ shirt = Image.open("shirt.png")
 output = ImageOps.fit(image, shirt.size)
 
 #combine images
-output.paste(shirt)
+#output = output.paste(shirt)
 
 #save output
 output.save(sys.argv[2])
