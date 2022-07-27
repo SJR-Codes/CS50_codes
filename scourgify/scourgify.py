@@ -25,5 +25,6 @@ try:
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-for line in lines:
+for line in lines[1:]:
     print(line)
+    tmp = line
