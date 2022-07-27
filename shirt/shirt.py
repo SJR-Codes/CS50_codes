@@ -5,7 +5,7 @@
 """
 
 import sys
-import PIL
+from PIL import Image
 
 #check that we have right amount of args
 if len(sys.argv) < 3:
@@ -16,14 +16,18 @@ elif len(sys.argv) > 3:
 #check that we handle only "jpg", "jpeg","png" files
 valid_exts = ["jpg", "jpeg","png"]
 intmp = sys.argv[1].lower().rsplit()
-if intmp[0] not in valid_exts
+if intmp[0] not in valid_exts:
     sys.exit("Invalid file format")
 
 outtmp = sys.argv[2].lower().rsplit()
-if outtmp[0] not in valid_exts
+if outtmp[0] not in valid_exts:
     sys.exit("Invalid output")
 
 if intmp != outmp:
     sys.exit("Input and output have different extensions")
 
+try:
+    image = Image.open(arg)
+except FileNotFoundError:
+    sys.exit("Input does not exist")
 
