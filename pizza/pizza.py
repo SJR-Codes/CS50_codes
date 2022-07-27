@@ -28,9 +28,9 @@ try:
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-headers = list(pizzas[0].keys())
+colnames = list(pizzas[0].keys())
 
-print(headers)
+print(colnames)
 
 #print(reader)
-print(tabulate(pizzas, tablefmt="grid"))
+print(tabulate(pizzas, headers=colnames, tablefmt="grid"))
