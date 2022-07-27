@@ -27,5 +27,5 @@ try:
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-print(pizzas)
-print(tabulate(pizzas, pizzas[0].keys, tablefmt="grid"))
+print(reader)
+#print(tabulate(pizzas, pizzas[0].keys(), tablefmt="grid"))
