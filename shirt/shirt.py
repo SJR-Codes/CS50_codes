@@ -5,7 +5,7 @@
 """
 
 import sys
-import PIL
+from PIL import Image, ImageOps
 
 #check that we have right amount of args
 if len(sys.argv) < 3:
@@ -27,14 +27,14 @@ if intmp[-1] != outtmp[-1]:
     sys.exit("Input and output have different extensions")
 
 try:
-    image = PIL.Image.open(sys.argv[1])
+    image = Image.open(sys.argv[1])
 except FileNotFoundError:
     sys.exit("Input does not exist")
 
-shirt = PIL.Image.open("shirt.png")
+shirt = Image.open("shirt.png")
 
 print(list(image.size))
 print(list(shirt.size))
 
-image = PIL.ImageOps.fit(image, shirt.size)
+image = ImageOps.fit(image, shirt.size)
 print(list(image.size))
