@@ -79,9 +79,9 @@ def readfile():
             student = {"name": name, "foo": foo}
             students.append(student)
 
-    #for student in sorted(students, key=get_name):
-    for student in sorted(students, key=get_foo):
-        print(f"{student['name']} from {student['foo']}")
+    for student in sorted(students, key=get_name):
+    #for student in sorted(students, key=get_foo):
+        print(f"{student['name'].title()} from {student['foo']}")
 
 def get_name(student):
     return student["name"].title()
