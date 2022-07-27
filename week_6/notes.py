@@ -5,9 +5,14 @@
 """
 
 def main():
-    
+    names = []
 
+    for _ in range(3):
+        name = input("Your name: ")
+        print(f"Hello, {name}")
+        names.append(name)
 
+    print(names)
 
 if __name__ == "__main__":
     main()
