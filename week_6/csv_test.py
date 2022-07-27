@@ -8,10 +8,20 @@ import csv
 
 students = []
 
+#basic csv
+"""
 with open("names.csv") as file:
     reader = csv.reader(file)
     for name, foo in reader:
         students.append({"name": name, "foo": foo})
+"""
+
+#dictionary reader
+with open("names.csv") as file:
+    reader = csv.DictReader(file)
+    for row in reader:
+        students.append({"name": row["name"], "foo": row["foo"]})
+
 
 for student in sorted(students, key=lambda student: student["name"]):
         print(f"{student['name'].title()} from {student['foo']}")
