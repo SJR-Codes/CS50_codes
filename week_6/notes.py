@@ -79,8 +79,10 @@ def readfile():
             student = {"name": name, "foo": foo}
             students.append(student)
 
-    for student in sorted(students, key=get_name):
+    #for student in sorted(students, key=get_name):
     #for student in sorted(students, key=get_foo):
+    #lambda functions, anonymous funcs
+    for student in sorted(students, key=lambda student: student["name"]):
         print(f"{student['name'].title()} from {student['foo']}")
 
 def get_name(student):
