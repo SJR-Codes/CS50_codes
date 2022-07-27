@@ -33,4 +33,7 @@ except FileNotFoundError:
 
 shirt = Image.open("shirt.png")
 
-print(list(image.getdata()))
+print(list(image.size))
+print(list(shirt.size))
+
+
