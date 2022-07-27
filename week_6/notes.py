@@ -7,14 +7,17 @@
 def main():
     names = []
 
-    for _ in range(3):
-        name = input("Your name: ")
-        names.append(name)
+    #for _ in range(3):
+    name = input("Your name: ")
+    #    names.append(name)
 
-    for name in sorted(names):
-        print(f"Hello, {name}")
+    #for name in sorted(names):
+    #    print(f"Hello, {name}")
 
-    open
+    filen = "names.txt"
+    file = open(filen, "w")
+    file.write(name)
+    file.close
 
 if __name__ == "__main__":
     main()
