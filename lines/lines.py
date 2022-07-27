@@ -18,7 +18,7 @@ elif not sys.argv[1].endswith(".py"):
 
 try:
     f = open(sys.argv[1], "r")
-except FileError:
+except FileNotFoundError:
     sys.exit("File does not exist")
 
 lcount = 0
