@@ -24,11 +24,11 @@ try:
         for row in reader:
             #headers = list(row.keys())
             pizzas.append(row)
-            print(row)
+            #print(row)
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-#headers = list(pizzas[1].keys())
+headers = list(pizzas[0].keys())
 
 print(headers)
 
