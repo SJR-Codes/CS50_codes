@@ -6,6 +6,14 @@
 
 import csv
 
+name = input("Give name: ")
+foo = input("Foo bar: ")
+
+with open("names.csv", "a") as file:
+    writer = csv.writer(file)
+    writer.writerow([name, foo])
+
+
 students = []
 
 #basic csv
