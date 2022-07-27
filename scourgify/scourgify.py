@@ -23,7 +23,7 @@ try:
         for row in reader:
             lines.append(row)
 except FileNotFoundError:
-    sys.exit("File does not exist")
+    sys.exit("Could not read " + sys.argv[1])
 
 after = "first,last,house\n"
 for line in lines[1:]:
