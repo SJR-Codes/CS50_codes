@@ -34,7 +34,8 @@ with open("names.csv") as file:
 with open("names.csv") as file:
     reader = csv.DictReader(file)
     for row in reader:
-        students.append({"name": row["name"], "foo": row["foo"]})
+        #students.append({"name": row["name"], "foo": row["foo"]})
+        students.append(row)
 
 
 for student in sorted(students, key=lambda student: student["name"]):
