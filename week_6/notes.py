@@ -8,20 +8,21 @@ def main():
     names = []
 
     #for _ in range(3):
-    name = input("Your name: ")
+    name = input("Give name: ")
+    foo = input("Foo bar: ")
     #    names.append(name)
 
     #for name in sorted(names):
     #    print(f"Hello, {name}")
 
-    filen = "names.txt"
+    filen = "names.csv"
     #file = open(filen, "a") #w = write, a = append
     #file.write(name + "\n")
     #file.close()
 
     #pythonic way
     with open(filen, "a") as file:
-        file.write(name + "\n")
+        file.write(name + "," + foo + "\n")
 
     readfile()
 """
@@ -35,7 +36,7 @@ def readfile():
 """
 
 def readfile():
-    filen = "names.txt"
+    filen = "names.csv"
     """
     filen = "names.txt"
     with open(filen, "r") as file:
@@ -43,7 +44,7 @@ def readfile():
             print("Hello, ", line.rstrip())
     """
 
-
+    """
     names = []
     with open(filen, "r") as file:
         for line in file:
@@ -51,6 +52,17 @@ def readfile():
 
     for name in sorted(names):
         print(f"Hello, {name.title()}")
+
+    """
+    lines = []
+    with open(filen, "r") as file:
+        for line in file:
+            lines.append(line.rstrip())
+
+    for line in sorted(lines):
+        row = line.rstrip().split(",")
+
+        print(f"Hello, {row[0].title()} from {row[1]}")
 
 
 
