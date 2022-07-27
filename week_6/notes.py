@@ -60,9 +60,11 @@ def readfile():
             lines.append(line.rstrip())
 
     for line in sorted(lines):
-        row = line.rstrip().split(",")
+        #row = line.rstrip().split(",")
+        name, foo = line.rstrip().split(",")
 
-        print(f"Hello, {row[0].title()} from {row[1]}")
+        #print(f"Hello, {row[0].title()} from {row[1]}")
+        print(f"Hello, {name.title()} from {foo}")
 
 
 
