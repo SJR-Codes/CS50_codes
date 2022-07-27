@@ -22,17 +22,8 @@ try:
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
-            #headers = list(row.keys())
             pizzas.append(row)
-            #print(row)
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-headersf = str(list(pizzas[0].keys()))
-
-#tmp = headers + pizzas
-
-print(headersf)
-
-#print(reader)
-print(tabulate(pizzas, headers=headersf, tablefmt="grid"))
+print(tabulate(pizzas, headers="keys", tablefmt="grid"))
