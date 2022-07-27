@@ -73,13 +73,21 @@ def readfile():
     with open(filen, "r") as file:
         for line in file:
             name, foo = line.rstrip().split(",")
-            student = {} #empty dict
-            student["name"] = name
-            student["foo"] = foo
+            #student = {} #empty dict
+            #student["name"] = name
+            #student["foo"] = foo
+            student = {"name": name, "foo": foo}
             students.append(student)
 
-    for student in students:
+    #for student in sorted(students, key=get_name):
+    for student in sorted(students, key=get_foo):
         print(f"{student['name']} from {student['foo']}")
+
+def get_name(student):
+    return student["name"].title()
+
+def get_foo(student):
+    return student["foo"]
 
 if __name__ == "__main__":
     main()
