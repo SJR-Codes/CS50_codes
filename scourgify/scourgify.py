@@ -25,6 +25,11 @@ try:
 except FileNotFoundError:
     sys.exit("File does not exist")
 
+after = "first, last, house\n"
 for line in lines[1:]:
     print(line)
-    tmp = line
+    house = line[1]
+    tmp = line[0].split(", ")
+    after += f"{tmp[0]},{tmp[1]},{house}\n"
+
+print(after)
