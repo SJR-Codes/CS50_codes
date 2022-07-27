@@ -33,3 +33,7 @@ for line in lines[1:]:
     after += f"{tmp[0]},{tmp[1]},{house}\n"
 
 print(after)
+
+try:
+    with open(sys.argv[2], "w") as file:
+        reader = csv.reader(file)
