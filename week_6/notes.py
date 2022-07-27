@@ -23,7 +23,10 @@ def main():
     with open(filen) as file:
         file.write(name + "\n")
 
-
+def readfile():
+    filen = "names.txt"
+    with open(filen) as file:
+        file.write(name + "\n")
 
 if __name__ == "__main__":
     main()
