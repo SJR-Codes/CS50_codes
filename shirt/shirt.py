@@ -33,8 +33,11 @@ except FileNotFoundError:
 
 shirt = Image.open("shirt.png")
 
-print(list(image.size))
-print(list(shirt.size))
+#create fitted output image, fit image to shirt size
+output = ImageOps.fit(image, shirt.size)
 
-image = ImageOps.fit(image, shirt.size)
-print(list(image.size))
+#combine images
+output.paste(shirt)
+
+#save output
+output.save(sys.argv[2])
