@@ -18,5 +18,6 @@ images[0].save(
     "costumes.gif",
     save_all=True,
     append_images[images[1]],
-    duration=200, loop=0]
+    duration=200,
+    loop=0,
 )
