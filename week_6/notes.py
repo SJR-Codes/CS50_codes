@@ -15,9 +15,15 @@ def main():
     #    print(f"Hello, {name}")
 
     filen = "names.txt"
-    file = open(filen, "a") #w = write, a = append
-    file.write(name + "\n")
-    file.close
+    #file = open(filen, "a") #w = write, a = append
+    #file.write(name + "\n")
+    #file.close()
+
+    #pythonic way
+    with open(filen) as file:
+        file.write(name + "\n")
+
+
 
 if __name__ == "__main__":
     main()
