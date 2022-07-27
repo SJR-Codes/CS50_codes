@@ -23,7 +23,6 @@ try:
         reader = csv.DictReader(file)
         headers = list(reader.keys())
         for row in reader:
-            #students.append({"name": row["name"], "foo": row["foo"]})
             pizzas.append(row)
 except FileNotFoundError:
     sys.exit("File does not exist")
