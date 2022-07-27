@@ -7,13 +7,14 @@
 import sys
 import PIL
 
-valid_exts = ["jpg", "jpeg","png"]
-
 #check that we have right amount of args
 if len(sys.argv) < 3:
     sys.exit("Too few command-line arguments")
 elif len(sys.argv) > 3:
     sys.exit("Too many command-line arguments")
-#check that we handle only csv files
-elif not sys.argv[1].lower() not in valid_exts:
+
+#check that we handle only "jpg", "jpeg","png" files
+valid_exts = ["jpg", "jpeg","png"]
+tmp = sys.argv[1].lower().rsplit()
+
     sys.exit("Not a CSV file")
