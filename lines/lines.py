@@ -7,7 +7,9 @@
 import sys
 
 try:
-    filen = sys.argv[1]
+    f = open(sys.argv[1], "r")
+except IndexError:
+    sys.exit("Enter filename.")
 except IndexError:
     sys.exit("Enter filename.")
 
