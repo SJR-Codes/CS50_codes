@@ -5,7 +5,8 @@
 """
 
 import sys
-
+import tabulate
+import csv
 
 #check that we have right amount of args
 if len(sys.argv) < 2:
@@ -15,3 +16,5 @@ elif len(sys.argv) > 2:
 #check that we handle only csv files
 elif not sys.argv[1].endswith(".csv"):
     sys.exit("Not a CSV file")
+
+
