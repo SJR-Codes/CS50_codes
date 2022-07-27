@@ -25,9 +25,8 @@ try:
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-after = "first, last, house\n"
+after = "first,last,house\n"
 for line in lines[1:]:
-    print(line)
     house = line[1]
     tmp = line[0].split(", ")
     after += f"{tmp[0]},{tmp[1]},{house}\n"
@@ -35,5 +34,4 @@ for line in lines[1:]:
 #print(after)
 
 with open(sys.argv[2], "w") as file:
-    writer = csv.writer(file)
-    writer.write(after)
+    file.write(after)
