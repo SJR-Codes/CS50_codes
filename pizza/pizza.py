@@ -28,11 +28,11 @@ try:
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-headers = list(pizzas[0].keys())
+headersf = str(list(pizzas[0].keys()))
 
 #tmp = headers + pizzas
 
-print(headers)
+print(headersf)
 
 #print(reader)
-#print(tabulate(tmp, headers="firstrow", tablefmt="grid"))
+print(tabulate(pizzas, headers=headersf, tablefmt="grid"))
