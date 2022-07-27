@@ -36,9 +36,24 @@ def readfile():
 
 def readfile():
     filen = "names.txt"
+    """
+    filen = "names.txt"
     with open(filen, "r") as file:
         for line in file:
             print("Hello, ", line.rstrip())
+    """
+
+
+    names = []
+    with open(filen, "r") as file:
+        for line in file:
+            names.append(line.rstrip())
+
+    for name in sorted(names):
+        print(f"Hello, {name.title()}")
+
+
+
 
 if __name__ == "__main__":
     main()
