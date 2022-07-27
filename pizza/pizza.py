@@ -30,9 +30,9 @@ except FileNotFoundError:
 
 headers = list(pizzas[0].keys())
 
-tmp = headers + pizzas
+#tmp = headers + pizzas
 
-print(tmp)
+print(headers)
 
 #print(reader)
-print(tabulate(tmp, headers="firstrow", tablefmt="grid"))
+#print(tabulate(tmp, headers="firstrow", tablefmt="grid"))
