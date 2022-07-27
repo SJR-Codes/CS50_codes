@@ -36,4 +36,5 @@ shirt = PIL.Image.open("shirt.png")
 print(list(image.size))
 print(list(shirt.size))
 
-PIL.ImageOps.fit(image, size)
+image = PIL.ImageOps.fit(image, shirt.size)
+print(list(image.size))
