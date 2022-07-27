@@ -32,8 +32,8 @@ for line in lines[1:]:
     tmp = line[0].split(", ")
     after += f"{tmp[0]},{tmp[1]},{house}\n"
 
-print(after)
+#print(after)
 
-try:
-    with open(sys.argv[2], "w") as file:
-        reader = csv.reader(file)
+with open(sys.argv[2], "w") as file:
+    writer = csv.writer(file)
+    writer.write(after)
