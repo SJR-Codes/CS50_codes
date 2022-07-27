@@ -17,4 +17,11 @@ elif len(sys.argv) > 2:
 elif not sys.argv[1].endswith(".csv"):
     sys.exit("Not a CSV file")
 
-
+try:
+    with open("names.csv") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            #students.append({"name": row["name"], "foo": row["foo"]})
+            students.append(row)
+except FileError:
+    
