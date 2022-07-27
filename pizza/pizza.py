@@ -5,7 +5,7 @@
 """
 
 import sys
-import tabulate
+from tabulate import tabulate
 import csv
 
 #check that we have right amount of args
