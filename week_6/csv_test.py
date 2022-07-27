@@ -9,9 +9,15 @@ import csv
 name = input("Give name: ")
 foo = input("Foo bar: ")
 
+"""
 with open("names.csv", "a") as file:
     writer = csv.writer(file)
     writer.writerow([name, foo])
+"""
+
+with open("names.csv", "a") as file:
+    writer = csv.DictWriter(file, fieldnames=["name","foo"])
+    writer.writerow({"name": name, "foo": foo})
 
 
 students = []
