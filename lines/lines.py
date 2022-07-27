@@ -6,11 +6,13 @@
 
 import sys
 
-if len(sys.argv < 2):
+#check that we have right amount of args
+if len(sys.argv) < 2:
     sys.exit("Too few command-line arguments")
-elif len(sys.argv > 2):
+elif len(sys.argv) > 2:
     sys.exit("Too many command-line arguments")
-elif not sys.argv[1].endswith(".py")
+#check that we handle only python files
+elif not sys.argv[1].endswith(".py"):
     sys.exit("Not a Python file")
 
 
@@ -25,4 +27,4 @@ for line in f:
     if line.strip() != "" or line.strip()[0] != "#":
         lcount += 1
 
-print
+print(lcount)
