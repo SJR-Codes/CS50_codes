@@ -18,14 +18,17 @@ elif not sys.argv[1].endswith(".csv"):
     sys.exit("Not a CSV file")
 
 pizzas = []
-headers = []
 try:
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for row in reader:
             pizzas.append(row)
+            print(row)
 except FileNotFoundError:
     sys.exit("File does not exist")
 
-print(reader)
-#print(tabulate(pizzas, pizzas[0].keys(), tablefmt="grid"))
+headers = list(pizzas.keys())
+
+
+#print(reader)
+print(tabulate(pizzas, headers, tablefmt="grid"))
