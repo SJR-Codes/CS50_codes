@@ -10,6 +10,13 @@ try:
     f = open(sys.argv[1], "r")
 except IndexError:
     sys.exit("Enter filename.")
-except IndexError:
+except FileError:
     sys.exit("Enter filename.")
 
+lcount = 0
+
+for line in f:
+    if line.strip() != "" or line.strip()[0] != "#":
+        lcount += 1
+
+print
