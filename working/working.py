@@ -26,8 +26,8 @@ def convert(s):
         else:
             raise ValueError
     except ValueError:
-    #    pass
-        sys.exit()
+        pass
+        #sys.exit()
 
 #converts 05:00 PM or 5 PM to 17:00
 def convert_time(t):
