@@ -27,6 +27,7 @@ email = input("Give me your email: ").strip()
 
 # \w = word or \W = not word
 #if re.search("^\w+@\w+\.\w+$", email):
+
 #case incensitive re.IGNORECASE
 #multiline re.MULTILINE
 #dot re.DOTALL
