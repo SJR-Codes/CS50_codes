@@ -1,6 +1,6 @@
 """
 * CS50P Problem Set 7
-* Test Um
+* Test Response
 * by Samu Reinikainen 28.07.2022
 """
 
