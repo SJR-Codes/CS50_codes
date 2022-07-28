@@ -41,6 +41,9 @@ def convert_time(t):
     else:
         hour = int(hour)
 
+    if len(hour) == 1:
+        hour = "0" + str(hour)
+
     return f"{hour}:{min}"
 
 
