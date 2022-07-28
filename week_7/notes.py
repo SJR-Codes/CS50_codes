@@ -9,9 +9,11 @@ import re
 email = input("Give me your email: ").strip()
 
 # everything except @-sign [^@]
-
 #if re.search("^[^@]+@[^@]+\.[a-zA-Z0-9]+$", email):
+
 #if re.search("^[a-öA-Ö0-9_]+@[a-öA-Ö0-9_]+\.[a-öA-Ö0-9_]+$", email):
+
+# \w = word or \W = not word
 if re.search("^\w+@\w+\.\w+$", email):
     print("Valid")
 else:
