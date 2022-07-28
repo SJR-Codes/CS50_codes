@@ -34,7 +34,7 @@ def convert_time(t):
     if ":" in t:
         hour, min = t[:-3].split(":")
     else:
-        hour = t[:-3]
+        hour = int(t[:-3])
         min = "00"
     if "PM" in t:
         hour = int(hour) + 12
