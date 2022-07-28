@@ -6,6 +6,12 @@
 
 import re
 
-twit = input("Give me your twitter: ").strip()
+twit = "https://twitter.com/huuhaauser" #input("Give me your twitter: ").strip()
 
 
+uname = twit.replace("https://twitter.com/", "")
+
+# if uname := re.search
+
+
+print(f"Username: {uname}")
