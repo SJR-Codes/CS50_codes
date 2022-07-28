@@ -14,12 +14,16 @@ def main():
 
 def convert(s):
     #09:00 AM to 05:00 PM
-    p = "^(.*) to (.*)$"
-    if m := re.search(p, s, re.IGNORECASE):
-        print(m.group(1))
-        print(m.group(2))
-    else:
-        raise ValueError
+    p = "^([0-1]?[0-9]:?(?:[0-6][0-6])? [AM|PM]) to ([0-1]?[0-9]:?(?:[0-6][0-6])? [AM|PM])$"
+    try:
+        if m := re.search(p, s, re.IGNORECASE):
+            print(m.group(1))
+            print(m.group(2))
+        else:
+            raise ValueError
+    except ValueError:
+        pass
+    #    sys.exit()
 
 
 
