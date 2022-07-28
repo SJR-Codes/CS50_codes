@@ -11,14 +11,16 @@ import sys
 def main():
     #print(parse(input("HTML: ")))
     url = '<iframe src="http://www.youtube.com/embed/xvFZjo5PgG0"></iframe>'
-    parse(url)
+    print(parse(url))
 
 
 def parse(s):
-    p = "src=\"https?(?:www\.)youtube\.com/embed/(.*)\""
-    m = re.search(p, s, re.IGNORECASE)
+    p = "src=\"https?://(?:www\.)?youtube\.com/embed/(.*)\""
+    if m := re.search(p, s, re.IGNORECASE):
+        if m.groups() == 1:
+            return "https://youtu.be/" + m.group(1)
 
-    print(m.group(1))
+    #print(m.group(1))
 
 
 if __name__ == "__main__":
