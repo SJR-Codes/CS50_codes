@@ -30,7 +30,7 @@ email = input("Give me your email: ").strip()
 
 #case incensitive re.IGNORECASE
 #multiline re.MULTILINE
-#dot re.DOTALL
+#newline as whitespace too re.DOTALL
 if re.search("^\w+@\w+\.\w+$", email, re.IGNORECASE):
     print("Valid")
 else:
