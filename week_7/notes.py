@@ -10,7 +10,7 @@ email = input("Give me your email: ").strip()
 
 # everything except @-sign [^@]
 
-if re.search("^[^@]+@[^@]+\.[^@]+$", email):
+if re.search("^[^@]+@[^@]+\.[a-zA-Z0-9]$", email):
     print("Valid")
 else:
     print("Invalid")
