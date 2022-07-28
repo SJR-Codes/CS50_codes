@@ -26,4 +26,6 @@ def test_garble():
     assert count("1234 um, 435") == 1
     assert count("1234 (um) 435") == 1
 
+def test_multiline():
+    assert count("It’s um not uncommon, in English, at least,\nto say “um” when trying to, um, think of a word.\nThe more you do it, though, the more noticeable it tends to be!") == 3
 """
