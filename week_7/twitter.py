@@ -6,7 +6,7 @@
 
 import re
 
-twit = "Hei https://twitter.com/huuhaauser" #input("Give me your twitter: ").strip()
+twit = "Hei https://twitter.com/huuhaauser/?foo=bar" #input("Give me your twitter: ").strip()
 
 
 #uname = twit.replace("https://twitter.com/", "")
@@ -19,7 +19,7 @@ uname = twit.removeprefix("https://twitter.com/")
 #uname = re.sub("\w*/", "", twit)
 #uname := re.sub(".*(https?://)?(www\.)?twitter\.com/", "", twit):
 
-pattern = ".*(?:https?://)?(?:www\.)?twitter\.com/(\w+)$"
+pattern = ".*(?:https?://)?(?:www\.)?twitter\.com/(\w+)/?"
 if uname := re.search(pattern, twit, re.IGNORECASE):
     print(f"Username: {uname.group(1)}")
 else:
