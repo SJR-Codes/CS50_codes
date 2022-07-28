@@ -10,6 +10,7 @@ from um import count
 def test_simple():
     assert count("Regular, um, Expressions") == 1
     assert count("Regular, um, um, Expressions") == 2
+    assert count("It’s um not uncommon, in English, at least, to say “um” when trying to, um, think of a word. The more you do it, though, the more noticeable it tends to be!") == 3
 
 
 def test_um_in():
