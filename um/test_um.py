@@ -8,6 +8,7 @@ import pytest
 from um import count
 
 def test_simple():
+    assert count("um") == 1
     assert count("Regular, um, Expressions") == 1
     assert count("Regular, um, um, Expressions") == 2
     assert count("Regular, UM, Um, Expressions um...") == 3
