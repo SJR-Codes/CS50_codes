@@ -26,7 +26,11 @@ email = input("Give me your email: ").strip()
 #if re.search("^[a-öA-Ö0-9_]+@[a-öA-Ö0-9_]+\.[a-öA-Ö0-9_]+$", email):
 
 # \w = word or \W = not word
-if re.search("^\w+@\w+\.\w+$", email):
+#if re.search("^\w+@\w+\.\w+$", email):
+#case incensitive re.IGNORECASE
+#multiline re.MULTILINE
+#dot re.DOTALL
+if re.search("^\w+@\w+\.\w+$", email, re.IGNORECASE):
     print("Valid")
 else:
     print("Invalid")
