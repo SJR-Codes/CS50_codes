@@ -13,7 +13,7 @@ def main():
 
 
 def count(s):
-    p = r"(?:\W(um)\W)|(um)"
+    p = r"(?:\W(um)\W)|^(um)$"
     if m := re.findall(p, s, flags=re.IGNORECASE):
         #print(m)
         return len(m)
