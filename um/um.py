@@ -9,11 +9,11 @@ import sys
 
 def main():
     #print(count(input("Text: ")))
-    print(count("um um"))
+    print(count("um mum"))
 
 
 def count(s):
-    p = r"(?:\W(um)\W)|(^um\W)|(\Wum$)|(^um$)"
+    p = r"(?:\W(um)\W)|(^um[ ,.])|(um$)|(^um$)"
     if m := re.findall(p, s, flags=re.IGNORECASE):
         #print(m)
         return len(m)
