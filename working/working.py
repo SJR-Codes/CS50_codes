@@ -8,10 +8,10 @@ import re
 import sys
 
 def main():
-    print(convert(input("Hours: ")))
-    #print(convert("09:00 AM to 05:00 PM"))
-    #print(convert("12:00 AM to 12:00 PM"))
-    #rint(convert("11:00 AM to 11:00 PM"))
+    #print(convert(input("Hours: ")))
+    print(convert("09:00 AM to 05:00 PM"))
+    print(convert("12:00 AM to 12:00 PM"))
+    print(convert("11:00 AM to 11:00 PM"))
 
 
 def convert(s):
