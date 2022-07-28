@@ -13,8 +13,9 @@ def main():
 
 
 def count(s):
-    p = "\W(um)\W"
+    p = "(?:\W(um)\W)*"
     if m := re.search(p, s, re.IGNORECASE):
+        print(m.groups())
         return len(m.groups())
 
 
