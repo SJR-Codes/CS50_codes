@@ -13,9 +13,10 @@ def main():
 
 def check(e):
 
-    if validators.email(e, allow_empty = False):
-        return "Valid"
-    else:
+    try:
+        if validators.email(e, allow_empty = False):
+            return "Valid"
+    except InvalidEmailError:
         return "Invalid"
 
 

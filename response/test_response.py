@@ -16,3 +16,6 @@ def test_invalid():
     assert check("ad@adfi") == "Invalid"
     assert check("asd@sub.ad.") == "Invalid"
     assert check("foo.bar@") == "Invalid"
+
+def test_garble():
+    assert check(" ") == "Invalid"
