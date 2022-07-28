@@ -31,3 +31,5 @@ def test_garble():
         assert convert("huuhaa")
     with pytest.raises(ValueError):
         assert convert("foo AM to bar PM")
+    with pytest.raises(ValueError):
+        assert convert(" ")
