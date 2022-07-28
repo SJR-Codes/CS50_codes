@@ -18,7 +18,7 @@ def parse(s):
     p = "src=\"(.*)\""
     m = re.search(p, s, re.IGNORECASE)
 
-    print(m)
+    print(m.group(1))
 
 
 if __name__ == "__main__":
