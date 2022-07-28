@@ -8,7 +8,9 @@ import re
 
 email = input("Give me your email: ").strip()
 
-if re.search("^.+@.+\.[a-z]+$", email):
+# everything except @-sign [^@]
+
+if re.search("^[^@]+@[^@]+\.[^@]+$", email):
     print("Valid")
 else:
     print("Invalid")
