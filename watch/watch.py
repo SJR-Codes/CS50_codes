@@ -13,10 +13,10 @@ def main():
 
 
 def parse(s):
-    ...
+    p = "(src=\"\")?"
+    m = re.search(p, m, re.IGNORECASE)
 
 
-...
 
 
 if __name__ == "__main__":
