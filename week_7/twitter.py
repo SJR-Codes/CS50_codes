@@ -19,7 +19,8 @@ uname = twit.removeprefix("https://twitter.com/")
 #uname = re.sub("\w*/", "", twit)
 #uname := re.sub(".*(https?://)?(www\.)?twitter\.com/", "", twit):
 
-if uname := re.search(".*(?:https?://)?(?:www\.)?twitter\.com/(.+)$", twit, re.IGNORECASE):
+pattern = ".*(?:https?://)?(?:www\.)?twitter\.com/(.+)$"
+if uname := re.search(pattern, twit, re.IGNORECASE):
     print(f"Username: {uname.group(1)}")
 else:
     print(f"{twit} is not valid!")
