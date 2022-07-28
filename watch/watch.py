@@ -9,8 +9,8 @@ import sys
 
 
 def main():
-    #print(parse(input("HTML: ")))
-    url = '<iframe src="http://www.youtube.com/embed/xvFZjo**gG0"></iframe>'
+    print(parse(input("HTML: ")))
+    #url = '<iframe src="http://www.youtube.com/embed/xvFZjo**gG0"></iframe>'
     print(parse(url))
 
 
