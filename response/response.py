@@ -16,7 +16,7 @@ def check(e):
     try:
         if validators.email(e, allow_empty = False):
             return "Valid"
-    except InvalidEmailError:
+    except errors.InvalidEmailError:
         return "Invalid"
 
 
