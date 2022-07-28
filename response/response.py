@@ -4,4 +4,8 @@
 * by Samu Reinikainen 28.07.2022
 """
 
-email = input("Give me your name: ").strip()
+
+
+email = input("What's your email address? ").strip()
+
+
