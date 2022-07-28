@@ -17,6 +17,7 @@ if ", " in name:
 
 ##matches = re.search("^(\w+), *(\w+)$", name)
 ##if matches:
+# or one-liner with walrus-operator :=
 if matches := re.search("^(\w+), *(\w+)$", name):
     #lname, fname = matches.groups()
     lname = matches.group(1)
