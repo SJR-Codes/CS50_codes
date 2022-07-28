@@ -1,3 +1,8 @@
+"""
+* CS50P Problem Set 7
+* Test Numb3rs
+* by Samu Reinikainen 28.07.2022
+"""
 from numb3rs import validate
 
 def test_valid_ips():
