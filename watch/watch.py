@@ -15,7 +15,7 @@ def main():
 
 
 def parse(s):
-    p = "src=\"(.*)\""
+    p = "src=\"https?(?:www\.)youtube\.com/embed/(.*)\""
     m = re.search(p, s, re.IGNORECASE)
 
     print(m.group(1))
