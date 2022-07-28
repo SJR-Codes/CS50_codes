@@ -13,11 +13,12 @@ def main():
 
 
 def count(s):
-    p = "(?:\W(um)\W)*"
+    p = r"(?:\W(um)\W)"
     if m := re.findall(p, s, flags=re.IGNORECASE):
-        print(m)
-        return len(m.groups())
+        #print(m)
+        return len(m)
 
+    return 0
 
 
 if __name__ == "__main__":
