@@ -15,8 +15,8 @@ uname = twit.removeprefix("https://twitter.com/")
 # if uname := re.search("")
 #re.sub(pattern, replace, twit)
 #uname = re.sub(".*(http|https)://twitter\.com/", "", twit)
-uname = re.sub(".*https?://(www\.)?twitter\.com/", "", twit)
-uname = re.sub("\w*/", "", twit)
+uname = re.sub(".*(https?://)?(www\.)?twitter\.com/", "", twit)
+#uname = re.sub("\w*/", "", twit)
 
 
 print(f"Username: {uname}")
