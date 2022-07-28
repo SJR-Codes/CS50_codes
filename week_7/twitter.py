@@ -19,6 +19,8 @@ uname = twit.removeprefix("https://twitter.com/")
 #uname = re.sub("\w*/", "", twit)
 #uname := re.sub(".*(https?://)?(www\.)?twitter\.com/", "", twit):
 
+#use ?: in () to NOT capture it if catching regexps
+
 pattern = ".*(?:https?://)?(?:www\.)?twitter\.com/(\w+)"
 if uname := re.search(pattern, twit, re.IGNORECASE):
     print(f"Username: {uname.group(1)}")
