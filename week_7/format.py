@@ -15,8 +15,9 @@ if ", " in name:
     name = f"{fname} {lname}"
 """
 
-matches = re.search("^(\w+), *(\w+)$", name)
-if matches:
+##matches = re.search("^(\w+), *(\w+)$", name)
+##if matches:
+if matches := re.search("^(\w+), *(\w+)$", name):
     #lname, fname = matches.groups()
     lname = matches.group(1)
     fname = matches.group(2)
