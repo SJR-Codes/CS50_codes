@@ -16,11 +16,16 @@ def convert(s):
     #09:00 AM to 05:00 PM
     #p = "^([0-1]?[0-9]:?(?:[0-5][0-6])?.[AM|PM]) to ([0-1]?[0-9]:?(?:[0-5][0-6])?.[AM|PM])$"
     #p = "^([0-9][0-9]:?[0-9][0-9].[AM|PM]) to ([0-9][0-9]:?[0-9][0-9].[AM|PM])$"
-    p = r"^([0-1]?[0-9](?::[0-5][0-9])? [A|P]M) to ([0-1]?[0-9](?::[0-5][0-9])? [A|P]M)$"
+    p = r"^([0-1]?[0-9](?::[0-5][0-9]))? ([A|P]M) to ([0-1]?[0-9](?::[0-5][0-9]))? ([A|P]M)$"
     #try:
     if m := re.search(p, s, re.IGNORECASE):
+        ret = ""
+        if m.group(2) == "PM":
+            
         print(m.group(1))
         print(m.group(2))
+        print(m.group(3))
+        print(m.group(4))
     else:
         raise ValueError
     #except ValueError:
