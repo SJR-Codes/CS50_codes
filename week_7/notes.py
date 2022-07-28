@@ -33,7 +33,7 @@ email = input("Give me your email: ").strip()
 #newline as whitespace too re.DOTALL
 #if re.search("^\w+@\w+\.\w+$", email, re.IGNORECASE):
 
-if re.search("^\w+@(\w+\.)+\w+$", email, re.IGNORECASE):
+if re.search("^(\w+|\.)+@(\w+\.)+\w+$", email, re.IGNORECASE):
     print("Valid")
 else:
     print("Invalid")
