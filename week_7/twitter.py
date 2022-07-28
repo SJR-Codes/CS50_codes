@@ -13,6 +13,8 @@ twit = "Hei https://twitter.com/huuhaauser" #input("Give me your twitter: ").str
 uname = twit.removeprefix("https://twitter.com/")
 
 # if uname := re.search("")
+#re.sub(pattern, replace, twit)
+uname = re.sub(".*/", "", twit)
 
 
 print(f"Username: {uname}")
