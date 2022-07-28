@@ -8,7 +8,7 @@ import re
 
 email = input("Give me your email: ").strip()
 
-if re.search("^.+@.+\.[a-Z]+$", email):
+if re.search("^.+@.+\.[a-z]+$", email):
     print("Valid")
 else:
     print("Invalid")
