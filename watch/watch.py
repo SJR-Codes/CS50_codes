@@ -9,14 +9,16 @@ import sys
 
 
 def main():
-    print(parse(input("HTML: ")))
+    #print(parse(input("HTML: ")))
+    url = '<iframe src="http://www.youtube.com/embed/xvFZjo5PgG0"></iframe>'
+    parse(url)
 
 
 def parse(s):
-    p = "(src=\"\")?"
-    m = re.search(p, m, re.IGNORECASE)
+    p = "src=\"(.*)\""
+    m = re.search(p, s, re.IGNORECASE)
 
-
+    print(m)
 
 
 if __name__ == "__main__":
