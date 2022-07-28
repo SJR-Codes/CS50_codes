@@ -8,6 +8,18 @@ import re
 
 email = input("Give me your email: ").strip()
 
+"""
+\d decimal digit
+\D NOT decimal
+
+\s whitespace (space, tab...)
+\S NOT whitespace
+
+\w word (with numbers and underscore)
+\W NOT word
+
+"""
+
 # everything except @-sign [^@]
 #if re.search("^[^@]+@[^@]+\.[a-zA-Z0-9]+$", email):
 
