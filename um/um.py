@@ -15,7 +15,7 @@ def main():
 def count(s):
     p = "(?:\W(um)\W)*"
     if m := re.findall(p, s, flags=re.IGNORECASE):
-        print(m.groups())
+        print(m)
         return len(m.groups())
 
 
