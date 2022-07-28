@@ -8,11 +8,18 @@ import re
 import sys
 
 def main():
-    print(convert(input("Hours: ")))
+    #print(convert(input("Hours: ")))
+    convert("09:00 AM to 05:00 PM")
 
 
 def convert(s):
-    ...
+    #09:00 AM to 05:00 PM
+    p = "^(.*) to (.*)$"
+    if m := re.search(p, s, re.IGNORECASE):
+        print(m.group(1))
+        print(m.group(2))
+    else:
+        raise ValueError
 
 
 
