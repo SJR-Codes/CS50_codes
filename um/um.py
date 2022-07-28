@@ -8,13 +8,14 @@ import re
 import sys
 
 def main():
-    print(count(input("Text: ")))
+    #print(count(input("Text: ")))
+    print(count("Regular, um, um, Expressions"))
 
 
 def count(s):
-    ...
-
-
+    p = "\W(um)\W"
+    if m := re.search(p, s, re.IGNORECASE):
+        return len(m.groups())
 
 
 
