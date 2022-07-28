@@ -15,7 +15,7 @@ def main():
 
 
 def parse(s):
-    p = "src=\"https?://(?:www\.)?youtube\.com/embed/(.*)\""
+    p = "src=\"https?://(?:www\.)?youtube\.com/embed/(\w*)\""
     if m := re.search(p, s, re.IGNORECASE):
         print(m.groups())
         #if len(m.groups()) == 1:
