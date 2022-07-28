@@ -6,11 +6,11 @@
 
 import re
 
-twit = "https://twitter.com/huuhaauser" #input("Give me your twitter: ").strip()
+twit = "Hei https://twitter.com/huuhaauser" #input("Give me your twitter: ").strip()
 
 
 #uname = twit.replace("https://twitter.com/", "")
-uname = twit.removeprefix("https://twitter.com/", "")
+uname = twit.removeprefix("https://twitter.com/")
 
 # if uname := re.search("")
 
