@@ -38,6 +38,9 @@ if re.search("^(\w+|\.)+@(\w+\.)+\w+$", email, re.IGNORECASE):
 else:
     print("Invalid")
 
+#re.match()
+#re.fullmatch()
+
 #username, domain = email.split("@")
 
 """
