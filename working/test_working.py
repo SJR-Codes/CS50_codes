@@ -25,10 +25,9 @@ def test_invalid_times():
     with pytest.raises(ValueError):
         assert convert("09:00 AM to")
 
-"""
+
 def test_garble():
     with pytest.raises(ValueError):
         assert convert("huuhaa")
     with pytest.raises(ValueError):
         assert convert("foo AM to bar PM")
-"""
