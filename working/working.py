@@ -8,8 +8,8 @@ import re
 import sys
 
 def main():
-    #print(convert(input("Hours: ")))
-    convert("09:00 AM to 05:00 PM")
+    print(convert(input("Hours: ")))
+    #print(convert("09:00 AM to 05:00 PM"))
 
 
 def convert(s):
@@ -17,27 +17,27 @@ def convert(s):
     #p = "^([0-1]?[0-9]:?(?:[0-5][0-6])?.[AM|PM]) to ([0-1]?[0-9]:?(?:[0-5][0-6])?.[AM|PM])$"
     #p = "^([0-9][0-9]:?[0-9][0-9].[AM|PM]) to ([0-9][0-9]:?[0-9][0-9].[AM|PM])$"
     p = r"^([0-1]?[0-9](?::[0-5][0-9])? [A|P]M) to ([0-1]?[0-9](?::[0-5][0-9])? [A|P]M)$"
-    #try:
-    if m := re.search(p, s, re.IGNORECASE):
-        start = convert_time(m.group(1))
-        end = convert_time(m.group(2))
+    try:
+        if m := re.search(p, s, re.IGNORECASE):
+            start = convert_time(m.group(1))
+            end = convert_time(m.group(2))
 
-        return start + " to " + end
-    else:
-        raise ValueError
-    #except ValueError:
+            return start + " to " + end
+        else:
+            raise ValueError
+    except ValueError:
     #    pass
-    #    sys.exit()
+        sys.exit()
 
 #converts 05:00 PM or 5 PM to 17:00
 def convert_time(t):
     if ":" in t:
-        hour, min = split(":", t[:-3])
+        hour, min = t[:-3].split(":")
     else:
         hour = t[:-3]
         min = "00"
     if "PM" in t:
-        int(hour) += 12
+        hour = int(hour) + 12
 
     return f"{hour}:{min}"
 
