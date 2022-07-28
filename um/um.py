@@ -8,8 +8,8 @@ import re
 import sys
 
 def main():
-    #print(count(input("Text: ")))
-    print(count("Regular, um, um, Expressions"))
+    print(count(input("Text: ")))
+    #print(count("Regular, um, um, Expressions"))
 
 
 def count(s):
