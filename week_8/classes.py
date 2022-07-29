@@ -16,17 +16,17 @@ class Student:
             raise ValueError("Missing name")
         if house not in houses:
             raise ValueError("Invalid house")
-            
+
         self.name = name
         self.house = house
 
 
 def main():
     #while True:
-        try:
-            student = get_student()
-        except ValueError:
-            ...
+        #try:
+    student = get_student()
+        #except ValueError:
+        #    ...
     print(f"{student.name} from {student.house}")
 
 def get_student():
