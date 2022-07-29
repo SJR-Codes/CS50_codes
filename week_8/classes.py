@@ -13,10 +13,15 @@ def main():
 
 def get_student():
     #create object/instance from class
-    student = Student()
+    #student = Student()
     #set objects attributes / instance variables
-    student.name = input("Name: ")
-    student.house = input("House: ")
+    #student.name = input("Name: ")
+    #student.house = input("House: ")
+
+    name = input("Name: ")
+    house = input("House: ")
+
+    student = Student(name, house)
 
     return student
 
