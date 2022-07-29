@@ -20,6 +20,8 @@ class Student:
         house = input("House: ")
         return cls(name, house)
 
+    #@staticmethod
+
 
 def main():
     student = Student.get()
