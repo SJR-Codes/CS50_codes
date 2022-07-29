@@ -20,6 +20,10 @@ class Student:
         self.name = name
         self.house = house
 
+    #make object pretty print itself
+    def __str__(self):
+        return f"Student: {self.name} from {self.house}"
+
 
 def main():
     #while True:
@@ -28,6 +32,7 @@ def main():
         #except ValueError:
         #    ...
     #print(f"{student.name} from {student.house}")
+    #using objects __str__ -method
     print(student)
 
 def get_student():
