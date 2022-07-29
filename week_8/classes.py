@@ -14,6 +14,7 @@ def main():
 def get_student():
     #create object/instance from class
     student = Student()
+    #set object attributes
     student.name = input("Name: ")
     student.house = input("House: ")
 
