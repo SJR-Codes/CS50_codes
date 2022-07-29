@@ -25,7 +25,7 @@ class Student:
     def __str__(self):
         return f"Student: {self.name} from {self.house}"
 
-    def foobar(self):
+    def huuhaa(self):
         if self.foobar:
             return f"Action: {self.foobar}"
         else:
@@ -40,7 +40,7 @@ def main():
     #print(f"{student.name} from {student.house}")
     #using objects __str__ -method
     print(student)
-    print(student.foobar)
+    print(student.huuhaa())
 
 def get_student():
     #create object/instance from class
