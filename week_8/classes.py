@@ -27,7 +27,8 @@ def main():
     student = get_student()
         #except ValueError:
         #    ...
-    print(f"{student.name} from {student.house}")
+    #print(f"{student.name} from {student.house}")
+    print(student)
 
 def get_student():
     #create object/instance from class
