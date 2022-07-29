@@ -30,7 +30,7 @@ class Student:
     #getter with decorators
     @property
     def house(self):
-        return self.house
+        return self._house
     #setter
     @house.setter
     def house(self, house):
@@ -38,7 +38,8 @@ class Student:
         if house not in houses:
             raise ValueError("Invalid house")
         else:
-            self.house = house
+            #
+            self._house = house
 
     def huuhaa(self):
         if self.foobar:
