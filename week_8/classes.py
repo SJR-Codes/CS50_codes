@@ -26,16 +26,18 @@ class Student:
     def __str__(self):
         return f"Student: {self.name} from {self.house}"
 
-    #getter
+    #getter with decorators
+    @property
     def house(self):
         return self.house
     #setter
+    @house.setter
     def house(self, house):
         houses = ["Foo","Bar","Huu","Haa"]
         if house not in houses:
             raise ValueError("Invalid house")
-
-        self.house = house
+        else:
+            self.house = house
 
     def huuhaa(self):
         if self.foobar:
