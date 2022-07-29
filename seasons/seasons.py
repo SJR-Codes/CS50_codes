@@ -22,14 +22,14 @@ def get_bday():
     if re.search(r"^[\d][\d][\d][\d]-[0-1][\d]-[0-3][\d]$", bday):
         return bday
     else:
-        sys.exit()
+        sys.exit(1)
 
 def dates_to_minutes(date_start, date_end):
     try:
         ds = date.fromisoformat(date_start)
         de = date.fromisoformat(date_end)
     except ValueError:
-        sys.exit()
+        sys.exit(1)
 
     diff = de - ds
     minutes = int(diff.total_seconds()/60)
@@ -43,7 +43,7 @@ def sing_minutes(minutes):
     try:
         mins = int(minutes)
     except ValueError:
-        sys.exit()
+        sys.exit(1)
 
     p = inflect.engine()
     words = p.number_to_words(mins, andword="")
