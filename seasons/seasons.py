@@ -24,7 +24,8 @@ def get_bday():
         sys.exit("Invalid date")
 
 def dates_to_minutes(date_start, date_end):
-    ...
+    ds = date.fromisoformat(date_start)
+    de = date_end
 
 
 if __name__ == "__main__":
