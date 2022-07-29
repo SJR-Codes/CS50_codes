@@ -26,7 +26,10 @@ class Student:
         return f"Student: {self.name} from {self.house}"
 
     def foobar(self):
-        return f"Action: {self.foobar}"
+        if self.foobar:
+            return f"Action: {self.foobar}"
+        else:
+            return "Nothing happens..."
 
 def main():
     #while True:
