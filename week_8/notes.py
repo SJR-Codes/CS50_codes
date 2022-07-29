@@ -7,7 +7,8 @@
 
 def main():
     student = get_student()
-    student[0] = "Foobar"
+    name = student[0]
+    name = "Foobar"
     print(f"{student[0]} from {student[1]}")
 
 def get_student():
