@@ -11,6 +11,8 @@
 class Student:
     #instance method to initialize
     def __init__(self, name, house):
+        houses = ["Foo","Bar","Huu","Haa"]
+        
         self.name = name
         self.house = house
 
