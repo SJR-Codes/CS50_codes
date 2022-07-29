@@ -25,7 +25,8 @@ class Student:
     def __str__(self):
         return f"Student: {self.name} from {self.house}"
 
-    #def
+    def foobar(self):
+        return f"Action: {self.foobar}"
 
 def main():
     #while True:
@@ -36,6 +37,7 @@ def main():
     #print(f"{student.name} from {student.house}")
     #using objects __str__ -method
     print(student)
+    print(student.foobar)
 
 def get_student():
     #create object/instance from class
