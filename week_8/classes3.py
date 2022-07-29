@@ -14,14 +14,20 @@ class Student:
         self.name = name
         self.house = house
 
-def main():
-    student = get_student()
-    print(student)
+    #make object pretty print itself
+    def __str__(self):
+        return f"Student: {self.name} from {self.house}"
 
-def get_student():
-    name = input("Name: ")
-    house = input("House: ")
-    return Student(name, house)
+    @classmethod
+    def get(cls):
+        name = input("Name: ")
+        house = input("House: ")
+        return cls(name, house)
+
+
+def main():
+    student = Student.get()
+    print(student)
 
 if __name__ == "__main__":
     main()
