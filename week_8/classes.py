@@ -70,6 +70,8 @@ def main():
 
     #using properties to prevent messing things like
     #student.house = "Gugguuu" #which bypass __init__ error checking
+    #but now we can do this
+    #student._house = "Gugguuu" #which bypass __init__ error checking
 
     print(student)
     #print(student.huuhaa())
