@@ -9,9 +9,10 @@
 #    ...
 
 class Student:
+    houses = ["Foo","Bar","Huu","Haa"]
+
     #instance method to initialize
     def __init__(self, name, house, foobar=None):
-        houses = ["Foo","Bar","Huu","Haa"]
         if not name:
             raise ValueError("Missing name")
         if house not in houses:
@@ -24,6 +25,16 @@ class Student:
     #make object pretty print itself
     def __str__(self):
         return f"Student: {self.name} from {self.house}"
+
+    #getter
+    def house(self):
+        return self.house
+    #setter
+    def house(self, house):
+        if house not in houses:
+            raise ValueError("Invalid house")
+
+        self.house = house
 
     def huuhaa(self):
         if self.foobar:
@@ -39,6 +50,10 @@ def main():
         #    ...
     #print(f"{student.name} from {student.house}")
     #using objects __str__ -method
+
+    #using properties to prevent messing things like
+    student.house = "Gugguuu" #which bypass __init__ error checking
+
     print(student)
     #print(student.huuhaa())
 
