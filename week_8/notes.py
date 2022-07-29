@@ -13,7 +13,7 @@ def get_student():
     name = input("Name: ")
     house = input("House: ")
 
-    #return two values as tuple
+    #return two values as tuple (immutable)
     return (name, house)
 
 if __name__ == "__main__":
