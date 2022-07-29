@@ -10,7 +10,7 @@ from datetime import date
 
 
 def main():
-    minutes = dates_to_minutes(get_bday(), now())
+    minutes = dates_to_minutes(get_bday(), date.today())
     print(minutes)
 
 
