@@ -34,5 +34,6 @@ print(weas)
 #knuts = potter.knuts + weas.knuts
 #total = Vault(galls, sickles, knuts)
 
+#+-operator overloaded in class __add__
 total = potter + weas
 print(total)
