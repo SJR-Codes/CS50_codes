@@ -6,7 +6,7 @@
 
 import sys
 import re
-from inflect import 
+from inflect import
 from datetime import date
 
 
@@ -32,9 +32,15 @@ def dates_to_minutes(date_start, date_end):
     diff = de - ds
     minutes = int(diff.total_seconds()/60)
 
+    #print(f"{de} - {ds} = {minutes}")
 
-    print(f"{de} - {ds} = {minutes}")
+    return minutes
 
+def sing_minutes(minutes):
+    p = inflect.engine()
+    words = p.number_to_words(p.ordinal(minutes))
+
+    print
 
 if __name__ == "__main__":
     main()
