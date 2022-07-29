@@ -27,7 +27,7 @@ class Student:
     def __str__(self):
         return f"Student: {self.name} from {self.house}"
 
-    #getter with decorators
+    #getter property with decorators
     @property
     def house(self):
         return self._house
