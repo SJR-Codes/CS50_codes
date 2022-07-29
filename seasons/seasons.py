@@ -13,7 +13,7 @@ from datetime import date
 def main():
     today = str(date.today())
     minutes = dates_to_minutes(get_bday(), today)
-    sing_minutes(minutes)
+    print(sing_minutes(minutes))
 
 
 def get_bday():
@@ -41,7 +41,7 @@ def sing_minutes(minutes):
     p = inflect.engine()
     words = p.number_to_words(minutes)
 
-    print(words.capitalize(), "minutes.")
+    return words.capitalize() + " minutes."
 
 if __name__ == "__main__":
     main()
