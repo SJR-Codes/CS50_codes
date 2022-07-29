@@ -4,10 +4,12 @@
 * by Samu Reinikainen 29.07.2022
 """
 
-from seasons import get_bday
+from seasons import dates_to_minutes, sing_minutes
 
-def test_bday():
-    assert get_bday("1999-05-05") == "1999-05-05"
-    assert get_bday("1999-05-35") == "Invalid date"
-    assert get_bday("1999-05-") == "Invalid date"
-    assert get_bday("aaaa-bb-cc") == "Invalid date"
+def test_d2m_valid():
+    assert dates_to_minutes("1999-05-05", ) == "1999-05-05"
+
+
+    assert dates_to_minutes("1999-05-35") == "Invalid date"
+    assert dates_to_minutes("1999-05-") == "Invalid date"
+    assert dates_to_minutes("aaaa-bb-cc") == "Invalid date"
