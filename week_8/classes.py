@@ -10,7 +10,7 @@
 
 class Student:
     #instance method to initialize
-    def __init__(self, name, house, foobar):
+    def __init__(self, name, house, foobar=None):
         houses = ["Foo","Bar","Huu","Haa"]
         if not name:
             raise ValueError("Missing name")
@@ -40,7 +40,7 @@ def main():
     #print(f"{student.name} from {student.house}")
     #using objects __str__ -method
     print(student)
-    print(student.huuhaa())
+    #print(student.huuhaa())
 
 def get_student():
     #create object/instance from class
@@ -51,12 +51,13 @@ def get_student():
 
     name = input("Name: ")
     house = input("House: ")
-    foobar = input("foobar: ")
+    #foobar = input("foobar: ")
 
     #student = Student(name, house)
     #return student
 
-    return Student(name, house, foobar)
+    #return Student(name, house, foobar)
+    return Student(name, house)
 
 if __name__ == "__main__":
     main()
