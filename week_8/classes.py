@@ -13,13 +13,20 @@ class Student:
     def __init__(self, name, house):
         houses = ["Foo","Bar","Huu","Haa"]
         if not name:
-            raise 
+            raise ValueError("Missing name")
+        if house not in houses:
+            raise ValueError("Invalid house")
+            
         self.name = name
         self.house = house
 
 
 def main():
-    student = get_student()
+    #while True:
+        try:
+            student = get_student()
+        except ValueError:
+            ...
     print(f"{student.name} from {student.house}")
 
 def get_student():
