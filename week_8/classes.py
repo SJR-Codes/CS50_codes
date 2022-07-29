@@ -57,7 +57,7 @@ def main():
     #using objects __str__ -method
 
     #using properties to prevent messing things like
-    student.house = "Gugguuu" #which bypass __init__ error checking
+    #student.house = "Gugguuu" #which bypass __init__ error checking
 
     print(student)
     #print(student.huuhaa())
