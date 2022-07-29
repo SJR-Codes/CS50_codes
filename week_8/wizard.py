@@ -38,8 +38,8 @@ class Professor(Wizard):
 
 def main():
     wizard = Wizard("Albus")
-    prof = Professor("Albus")
-    student = Student("Harry")
+    prof = Professor("Albus", "Huuhaa")
+    student = Student("Harry", "Phulphal")
     print(student)
 
 if __name__ == "__main__":
