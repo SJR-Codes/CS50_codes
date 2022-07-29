@@ -12,6 +12,7 @@ def main():
     print(f"{student.name} from {student.house}")
 
 def get_student():
+    #create object/instance from class
     student = Student()
     student.name = input("Name: ")
     student.house = input("House: ")
