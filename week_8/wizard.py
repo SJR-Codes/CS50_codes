@@ -4,10 +4,17 @@
 * by Samu Reinikainen 29.07.2022
 """
 
-class Student:
+class Wizard:
+    def __init__(self, name):
+        if not name:
+            raise ValueError("Invalid name")
+        self.name = name
+
+class Student(Wizard):
     #instance method to initialize
     def __init__(self, name, house):
-        self.name = name
+        #calling parent class
+        super().__init__(name)
         self.house = house
 
     #make object pretty print itself
@@ -22,10 +29,11 @@ class Student:
 
     #@staticmethod
 
-class professor:
+class Professor(Wizard):
     #instance method to initialize
     def __init__(self, name, subject):
-        self.name = name
+        #calling parent class
+        super().__init__(name)
         self.subject = subject
 
 def main():
