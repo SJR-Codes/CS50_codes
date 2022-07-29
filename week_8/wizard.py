@@ -36,11 +36,16 @@ class Professor(Wizard):
         super().__init__(name)
         self.subject = subject
 
+    #make object pretty print itself
+    def __str__(self):
+        return f"Professor: {self.name} teaches {self.subject}"
+
 def main():
     wizard = Wizard("Albus")
     prof = Professor("Albus", "Huuhaa")
     student = Student("Harry", "Phulphal")
     print(student)
+    print(prof)
 
 if __name__ == "__main__":
     main()
