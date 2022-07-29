@@ -13,8 +13,8 @@ class Student:
     #instance method to initialize
     def __init__(self, name, house, foobar=None):
         #houses = ["Foo","Bar","Huu","Haa"]
-        if not name:
-            raise ValueError("Missing name")
+        #if not name:
+        #    raise ValueError("Missing name")
         #not needed anymore cause we have setter for house
         #if house not in houses:
         #    raise ValueError("Invalid house")
@@ -26,6 +26,16 @@ class Student:
     #make object pretty print itself
     def __str__(self):
         return f"Student: {self.name} from {self.house}"
+
+    @property
+    def name(self):
+        #use underscore so variables and method name don't collide
+        return self._name
+    #setter
+    @name.setter(self, name):
+        if not name:
+            raise ValueError("Missing name")
+        self._name = name
 
     #getter property with decorators
     @property
