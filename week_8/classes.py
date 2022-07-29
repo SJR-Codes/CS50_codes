@@ -30,6 +30,7 @@ class Student:
     #getter property with decorators
     @property
     def house(self):
+        #use underscore so variables and method name don't collide
         return self._house
     #setter
     @house.setter
