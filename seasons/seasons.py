@@ -40,7 +40,7 @@ def sing_minutes(minutes):
     p = inflect.engine()
     words = p.number_to_words(p.ordinal(minutes))
 
-    print
+    print(words.)
 
 if __name__ == "__main__":
     main()
