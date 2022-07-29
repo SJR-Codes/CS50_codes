@@ -37,7 +37,9 @@ class Professor(Wizard):
         self.subject = subject
 
 def main():
-    student = Student.get()
+    wizard = Wizard("Albus")
+    prof = Professor("Albus")
+    student = Student("Harry")
     print(student)
 
 if __name__ == "__main__":
