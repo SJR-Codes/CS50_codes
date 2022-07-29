@@ -6,19 +6,28 @@
 
 
 def main():
-    #using tuple or list:
     student = get_student()
+
+    #using tuple or list:
+    #print(f"{student[0]} from {student[1]}")
+
+    #using dict:
     print(f"{student[0]} from {student[1]}")
 
 def get_student():
-    name = input("Name: ")
-    house = input("House: ")
+    #name = input("Name: ")
+    #house = input("House: ")
 
     #return two values as tuple (inmutable)
     #return (name, house)
 
     #return two values as list (if you want to change values)
-    return [name, house]
+    #return [name, house]
+
+    #return two values as list (if you want to change values)
+    student["name"] = input("Name: ")
+    student["house"] = input("House: ")
+    return {student}
 
 if __name__ == "__main__":
     main()
