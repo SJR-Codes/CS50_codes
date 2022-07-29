@@ -24,9 +24,12 @@ def get_bday():
         sys.exit()
 
 def dates_to_minutes(date_start, date_end):
-    ds = date.fromisoformat(date_start)
-    de = date.fromisoformat(date_end)
-
+    try:
+        ds = date.fromisoformat(date_start)
+        de = date.fromisoformat(date_end)
+    except ValueError:
+        sys.exit()
+        
     diff = de - ds
     minutes = int(diff.total_seconds()/60)
 
