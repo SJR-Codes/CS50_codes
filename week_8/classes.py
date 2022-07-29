@@ -32,7 +32,8 @@ class Student:
         #use underscore so variables and method name don't collide
         return self._name
     #setter
-    @name.setter(self, name):
+    @name.setter
+    def name(self, name):
         if not name:
             raise ValueError("Missing name")
         self._name = name
