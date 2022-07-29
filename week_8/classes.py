@@ -38,7 +38,7 @@ class Student:
         if house not in houses:
             raise ValueError("Invalid house")
         else:
-            #
+            #use underscore so variables and method name don't collide
             self._house = house
 
     def huuhaa(self):
