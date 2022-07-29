@@ -46,7 +46,7 @@ class Student:
             self._house = house
 
     #class methods
-    @classmethod
+    #@classmethod
     #
 
 def main():
