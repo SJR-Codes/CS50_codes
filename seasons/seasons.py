@@ -18,7 +18,7 @@ def main():
 
 def get_bday():
     bday = input("Your birthday (YYYY-MM-DD): ").strip()
-    if re.search("^[\d][\d][\d][\d]-[0-1][\d]-[0-3][\d]$", bday):
+    if re.search(r"^[\d][\d][\d][\d]-[0-1][\d]-[0-3][\d]$", bday):
         return bday
     else:
         sys.exit()
@@ -29,11 +29,11 @@ def dates_to_minutes(date_start, date_end):
         de = date.fromisoformat(date_end)
     except ValueError:
         sys.exit()
-        
+
     diff = de - ds
     minutes = int(diff.total_seconds()/60)
 
-    print(f"{de} - {ds} = {minutes}")
+    #print(f"{de} - {ds} = {minutes}")
 
     return minutes
 
