@@ -12,7 +12,7 @@ def main():
     #print(f"{student[0]} from {student[1]}")
 
     #using dict:
-    print(f"{student[0]} from {student[1]}")
+    print(f"{student['name']} from {student['house']}")
 
 def get_student():
     #name = input("Name: ")
@@ -25,9 +25,10 @@ def get_student():
     #return [name, house]
 
     #return two values as list (if you want to change values)
+    student = {}
     student["name"] = input("Name: ")
     student["house"] = input("House: ")
-    return {student}
+    return student
 
 if __name__ == "__main__":
     main()
