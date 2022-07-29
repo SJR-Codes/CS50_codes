@@ -6,13 +6,13 @@
 
 import sys
 import re
-from inflect import
+import inflect
 from datetime import date
 
 
 def main():
     minutes = dates_to_minutes(get_bday(), date.today())
-    print(minutes)
+    sing_minutes(minutes)
 
 
 def get_bday():
@@ -40,7 +40,7 @@ def sing_minutes(minutes):
     p = inflect.engine()
     words = p.number_to_words(p.ordinal(minutes))
 
-    print(words.)
+    print(words.capitalize())
 
 if __name__ == "__main__":
     main()
