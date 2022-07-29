@@ -45,6 +45,10 @@ class Student:
             #use underscore so variables and method name don't collide
             self._house = house
 
+    #class methods
+    @classmethod
+    #
+
 def main():
     student = get_student()
     print(student)
