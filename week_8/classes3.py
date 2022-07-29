@@ -4,10 +4,6 @@
 * by Samu Reinikainen 29.07.2022
 """
 
-#
-#class Student:
-#    ...
-
 class Student:
     #instance method to initialize
     def __init__(self, name, house):
