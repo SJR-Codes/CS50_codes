@@ -28,9 +28,11 @@ def dates_to_minutes(date_start, date_end):
     ds = date.fromisoformat(date_start)
     de = date_end
 
-    diff = ds - de
+    diff = de - ds
+    minutes = int(diff.total_seconds()/60)
 
-    print(f"{ds} - {de} = {diff}")
+
+    print(f"{de} - {ds} = {minutes}")
 
 
 if __name__ == "__main__":
