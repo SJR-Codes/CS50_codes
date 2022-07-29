@@ -12,11 +12,12 @@ class Student:
 
     #instance method to initialize
     def __init__(self, name, house, foobar=None):
-        houses = ["Foo","Bar","Huu","Haa"]
+        #houses = ["Foo","Bar","Huu","Haa"]
         if not name:
             raise ValueError("Missing name")
-        if house not in houses:
-            raise ValueError("Invalid house")
+        #not needed anymore cause we have setter for house
+        #if house not in houses:
+        #    raise ValueError("Invalid house")
 
         self.name = name
         self.house = house
