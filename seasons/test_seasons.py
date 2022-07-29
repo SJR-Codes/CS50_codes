@@ -4,16 +4,10 @@
 * by Samu Reinikainen 29.07.2022
 """
 
-import sys
-from datetime import date
+from seasons import get_bday
 
-
-def main():
-    ...
-
-
-...
-
-
-if __name__ == "__main__":
-    main()
+def test_bday():
+    assert get_bday("1999-05-05") == "1999-05-05"
+    assert get_bday("1999-05-35") == "Invalid date"
+    assert get_bday("1999-05-") == "Invalid date"
+    assert get_bday("aaaa-bb-cc") == "Invalid date"
