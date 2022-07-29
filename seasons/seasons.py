@@ -11,7 +11,8 @@ from datetime import date
 
 
 def main():
-    minutes = dates_to_minutes(get_bday(), date.today())
+    today = str(date.today())
+    minutes = dates_to_minutes(get_bday(), today)
     sing_minutes(minutes)
 
 
@@ -24,12 +25,12 @@ def get_bday():
 
 def dates_to_minutes(date_start, date_end):
     ds = date.fromisoformat(date_start)
-    de = date_end
+    de = date.fromisoformat(date_end)
 
     diff = de - ds
     minutes = int(diff.total_seconds()/60)
 
-    #print(f"{de} - {ds} = {minutes}")
+    print(f"{de} - {ds} = {minutes}")
 
     return minutes
 
