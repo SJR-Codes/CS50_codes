@@ -12,7 +12,8 @@ from datetime import date
 
 def main():
     today = str(date.today())
-    minutes = dates_to_minutes(get_bday(), today)
+    user_day = get_bday()
+    minutes = dates_to_minutes(user_day, today)
     print(sing_minutes(minutes))
 
 
