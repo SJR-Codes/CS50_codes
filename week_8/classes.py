@@ -13,7 +13,7 @@ class Student:
     def __init__(self, name, house):
         houses = ["Foo","Bar","Huu","Haa"]
         if not name:
-            
+            raise 
         self.name = name
         self.house = house
 
