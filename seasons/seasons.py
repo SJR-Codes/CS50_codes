@@ -19,7 +19,7 @@ def get_bday():
     #bday = input("Your birthday (YYYY-MM-DD): ").strip()
     bday = "1999-05-05"
     bday = "2021-07-29"
-    #bday = "1999-05-"
+    bday = "1999-05-"
     if re.search("^[\d][\d][\d][\d]-[0-1][\d]-[0-3][\d]$", bday):
         return bday
     else:
@@ -38,9 +38,9 @@ def dates_to_minutes(date_start, date_end):
 
 def sing_minutes(minutes):
     p = inflect.engine()
-    words = p.number_to_words(p.ordinal(minutes))
+    words = p.number_to_words(minutes)
 
-    print(words.capitalize())
+    print(words.capitalize(), "minutes.")
 
 if __name__ == "__main__":
     main()
