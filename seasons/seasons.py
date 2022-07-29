@@ -38,8 +38,14 @@ def dates_to_minutes(date_start, date_end):
     return minutes
 
 def sing_minutes(minutes):
+
+    try:
+        mins = int(minutes)
+    except ValueError:
+        sys.exit()
+
     p = inflect.engine()
-    words = p.number_to_words(minutes)
+    words = p.number_to_words(mins)
 
     return words.capitalize() + " minutes."
 

@@ -24,7 +24,7 @@ def test_sing():
     assert sing_minutes(1051200) == "One million, fifty-one thousand, two hundred minutes."
 
 def test_sing_fail():
-    #with pytest.raises(SystemExit):
-    assert sing_minutes("aaa") == ""
-    #with pytest.raises(SystemExit):
-    assert sing_minutes() == ""
+    with pytest.raises(SystemExit):
+        assert sing_minutes("aaa")
+    with pytest.raises(SystemExit):
+        assert sing_minutes("")
