@@ -10,7 +10,7 @@ from datetime import date
 
 
 def main():
-    minutes = dates_to_minutes(get_bday()
+    minutes = dates_to_minutes(get_bday(), now())
     print(minutes)
 
 
@@ -23,7 +23,7 @@ def get_bday():
     else:
         sys.exit("Invalid date")
 
-def dates_to_minutes(ds, de):
+def dates_to_minutes(date_start, date_end):
     ...
 
 
