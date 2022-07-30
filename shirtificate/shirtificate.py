@@ -8,6 +8,7 @@ from fpdf import FPDF
 
 def make_shirt(name)
     pdf = FPDF(orientation="P", unit="mm", format="A4")
+    pdf.set_auto_page_break(False)
     pdf.add_page()
     pdf.set_font("helvetica", "B", 16)
     pdf.cell(40, 10, "CS50 Shirtificate")
