@@ -16,9 +16,9 @@ def make_shirt(name):
     pdf.image("shirtificate.png", w=pdf.epw, h=0)
     pdf.set_y(120)
     pdf.set_text_color(255,255,255)
-    pdf.cell(0, 0, name, align="C", new_x="LEFT", new_y="NEXT")
-    pdf.cell(0, 0, "took CS50", align="C", new_x="LEFT", new_y="NEXT")
-    pdf.cell(0, 0, "and survived", align="C", new_x="LEFT", new_y="NEXT")
+    pdf.cell(0, 0, name, align="C", new_y="NEXT")
+    pdf.cell(0, 0, "took CS50", align="C", new_y="NEXT")
+    pdf.cell(0, 0, "and survived", align="C", new_y="NEXT")
     pdf.output("shirtificate.pdf")
 
 def main():
