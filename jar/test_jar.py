@@ -34,4 +34,4 @@ def test_withdraw():
 def test_print():
     pot = jar.Jar(12)
     pot.deposit(1)
-    assert pot() == "🍪"
+    assert print(pot == "🍪"

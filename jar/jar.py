@@ -48,7 +48,7 @@ class Jar:
 def main():
     pot = Jar()
 
-    pot.deposit(1)
+    #pot.deposit(5)
 
     print(pot)
 
