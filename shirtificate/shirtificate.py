@@ -7,4 +7,9 @@
 from fpdf import FPDF
 
 class shirt(FPDF):
-    
+    def __init__(self, name):
+        if is_integer(capacity) and int(capacity) > 0:
+            self.amount = 0
+            self.space = int(capacity)
+        else:
+            raise ValueError
