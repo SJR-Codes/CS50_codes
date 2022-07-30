@@ -15,6 +15,7 @@ def make_shirt(name):
     pdf.set_y(60)
     pdf.image("shirtificate.png", w=pdf.epw, h=0)
     pdf.set_y(120)
+    self.set_text_color(0, 0, 0)
     pdf.cell(0, 0, name, align="C", new_x="LEFT", new_y="NEXT")
     pdf.output("shirtificate.pdf")
 
