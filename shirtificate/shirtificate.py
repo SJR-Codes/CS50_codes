@@ -6,3 +6,5 @@
 
 from fpdf import FPDF
 
+class shirt(FPDF):
+    
