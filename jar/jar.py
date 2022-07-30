@@ -16,13 +16,13 @@ class Jar:
         print("🍪" * self.amount)
 
     def deposit(self, n):
-        if n > 0:
+        if n > 0 self.amount+n <= self.capacity:
             self.amount += n
         else:
             raise ValueError
 
     def withdraw(self, n):
-        if n > 0:
+        if n > 0 and self.amount-n >= 0:
             self.amount -= n
         else:
             raise ValueError
