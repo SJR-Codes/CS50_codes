@@ -20,9 +20,9 @@ def make_shirt(name):
     pdf.ln(30)
     #pdf.set_y(160)
     pdf.cell(0, 0, "took CS50", new_y="NEXT", align="C")
-    pdf.ln(30)
+    pdf.ln(10)
     #pdf.set_y(200)
-    pdf.set_font("helvetica", "B", 16)
+    pdf.set_font("helvetica", "B", 12)
     pdf.cell(0, 0, "(and survived)", new_y="NEXT", align="C")
     pdf.output("shirtificate.pdf")
 
