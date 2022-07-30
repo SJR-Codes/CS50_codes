@@ -11,7 +11,7 @@ def make_shirt(name):
     pdf.set_auto_page_break(False)
     pdf.add_page()
     pdf.set_font("helvetica", "B", 32)
-    pdf.cell(0, 0, "CS50 Shirtificate", align="C")
+    pdf.cell(0, 0, "CS50 Shirtificate", align="C", new_x="LEFT")
     pdf.image("shirtificate.png", w=pdf.epw, h=0)
     pdf.output("shirtificate.pdf")
 
