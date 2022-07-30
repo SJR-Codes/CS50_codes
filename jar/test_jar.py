@@ -42,4 +42,16 @@ def test_print():
 
 def test_capacity():
     pot = jar.Jar(1)
-    assert pot.capacity() == 1
+    assert pot.capacity == 1
+    pot = jar.Jar(5)
+    assert pot.capacity == 5
+    pot = jar.Jar()
+    assert pot.capacity == 12
+
+def test_size():
+    pot = jar.Jar(12)
+    assert pot.size == 0
+    pot = pot.deposit(5)
+    assert pot.size == 5
+    pot = pot.deposit(7)
+    assert pot.size == 12

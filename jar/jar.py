@@ -52,7 +52,7 @@ def main():
 
     print(pot)
 
-    print(str(pot.capacity()))
+    print(pot.capacity)
 
 
 def is_integer(n):
