@@ -30,3 +30,8 @@ def test_withdraw():
         pot.withdraw("10")
     with pytest.raises(ValueError):
         pot.withdraw("guu")
+
+def test_print():
+    pot = jar.Jar(12)
+    pot.deposit(1)
+    assert pot() == "🍪"

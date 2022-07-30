@@ -13,7 +13,7 @@ class Jar:
             raise ValueError
 
     def __str__(self):
-        print("🍪" * self.amount)
+        return "🍪" * self.amount
 
     def deposit(self, n):
         if not is_integer(n):
@@ -47,6 +47,11 @@ class Jar:
 
 def main():
     pot = Jar()
+
+    pot.deposit(1)
+
+    print(pot)
+
 
 def is_integer(n):
     try:
