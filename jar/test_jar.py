@@ -51,7 +51,7 @@ def test_capacity():
 def test_size():
     pot = jar.Jar(12)
     assert pot.size == 0
-    pot = pot.deposit(5)
+    pot.deposit(5)
     assert pot.size == 5
-#    pot = pot.deposit(7)
-#    assert pot.size == 12
+    pot.deposit(7)
+    assert pot.size == 12
