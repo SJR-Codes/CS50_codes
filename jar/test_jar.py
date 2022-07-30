@@ -8,4 +8,5 @@ import pytest
 import jar
 
 def test_init():
-    with pytest 
+     with pytest.raises(ValueError):
+        jar = Jar()

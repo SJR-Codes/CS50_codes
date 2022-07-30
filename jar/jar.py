@@ -16,7 +16,7 @@ class Jar:
         print("🍪" * self.amount)
 
     def deposit(self, n):
-        if n > 0 self.amount+n <= self.capacity:
+        if n > 0 and self.amount+n <= self.capacity:
             self.amount += n
         else:
             raise ValueError
