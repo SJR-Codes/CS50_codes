@@ -10,8 +10,8 @@ def make_shirt(name):
     pdf = FPDF(orientation="P", unit="mm", format="A4")
     pdf.set_auto_page_break(False)
     pdf.add_page()
-    pdf.set_font("helvetica", "B", 16)
-    pdf.cell(40, 10, "CS50 Shirtificate", align="C")
+    pdf.set_font("helvetica", "B", 32)
+    pdf.cell(0, 0, "CS50 Shirtificate", align="C")
     pdf.output("shirtificate.pdf")
 
 def main():
