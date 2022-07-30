@@ -6,7 +6,7 @@
 
 class Jar:
     def __init__(self, capacity=12):
-        if capacity > 0:
+        if is_integer(capacity) and capacity > 0:
             self.amount = 0
             self.space = capacity
         else:

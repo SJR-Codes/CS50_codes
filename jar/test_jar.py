@@ -9,4 +9,4 @@ import jar
 
 def test_init():
      with pytest.raises(ValueError):
-        jar = Jar()
+        pot = jar.Jar(-1)
