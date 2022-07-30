@@ -36,7 +36,7 @@ class Jar:
         return self.amount
 
 def main():
-    ...
+    pot = Jar()
 
 
 if __name__ == "__main__":
