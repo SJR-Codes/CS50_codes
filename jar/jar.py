@@ -13,22 +13,27 @@ class Jar:
             raise ValueError
 
     def __str__(self):
-        ...
+        print("🍪" * self.amount)
 
     def deposit(self, n):
-        ...
+        if n > 0:
+            self.amount += n
+        else:
+            raise ValueError
 
     def withdraw(self, n):
-        ...
+        if n > 0:
+            self.amount -= n
+        else:
+            raise ValueError
 
     @property
     def capacity(self):
-        ...
+        return self.capacity
 
     @property
     def size(self):
-        ...
-
+        return self.amount
 
 def main():
     ...
