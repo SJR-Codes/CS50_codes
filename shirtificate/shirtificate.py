@@ -6,18 +6,18 @@
 
 from fpdf import FPDF
 
-def make_shirt(name)
+def make_shirt(name):
     pdf = FPDF(orientation="P", unit="mm", format="A4")
     pdf.set_auto_page_break(False)
     pdf.add_page()
     pdf.set_font("helvetica", "B", 16)
-    pdf.cell(40, 10, "CS50 Shirtificate")
+    pdf.cell(40, 10, "CS50 Shirtificate", align="C")
     pdf.output("shirtificate.pdf")
 
 def main():
     name = input("Enter name: ").strip()
 
-    if name.len() > 0:
+    if len(name) > 0:
         make_shirt(name)
     else:
         exit()
