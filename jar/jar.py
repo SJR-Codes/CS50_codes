@@ -48,9 +48,11 @@ class Jar:
 def main():
     pot = Jar()
 
-    #pot.deposit(5)
+    pot.deposit(5)
 
     print(pot)
+
+    print(pot.capacity())
 
 
 def is_integer(n):
