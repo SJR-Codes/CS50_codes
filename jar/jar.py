@@ -6,9 +6,9 @@
 
 class Jar:
     def __init__(self, capacity=12):
-        if is_integer(capacity) and capacity > 0:
+        if is_integer(capacity) and int(capacity) > 0:
             self.amount = 0
-            self.space = capacity
+            self.space = int(capacity)
         else:
             raise ValueError
 
@@ -16,12 +16,22 @@ class Jar:
         print("🍪" * self.amount)
 
     def deposit(self, n):
+        if not is_integer(n):
+            raise ValueError
+
+        n = int(n)
+
         if n > 0 and self.amount+n <= self.space:
-            self.amount += n
+                self.amount += n
         else:
             raise ValueError
 
     def withdraw(self, n):
+        if not is_integer(n):
+            raise ValueError
+
+        n = int(n)
+
         if n > 0 and self.amount-n >= 0:
             self.amount -= n
         else:
@@ -37,6 +47,15 @@ class Jar:
 
 def main():
     pot = Jar()
+
+def is_integer(n):
+    try:
+        int(n)
+    except ValueError:
+        return False
+
+    return True
+
 
 
 if __name__ == "__main__":
