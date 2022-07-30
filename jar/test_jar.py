@@ -4,3 +4,8 @@
 * by Samu Reinikainen 30.07.2022
 """
 
+import pytest
+import jar
+
+def test_init():
+    with pytest 
