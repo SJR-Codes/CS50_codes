@@ -12,7 +12,7 @@ def make_shirt(name):
     pdf.add_page()
     pdf.set_font("helvetica", "B", 32)
     pdf.cell(0, 0, "CS50 Shirtificate", align="C")
-    pdf.image("shirtificate.png", None, None, 0, pdf.eph)
+    pdf.image("shirtificate.png", x=None, y=None, w=0, h=pdf.eph)
     pdf.output("shirtificate.pdf")
 
 def main():
