@@ -8,7 +8,7 @@ class Jar:
     def __init__(self, capacity=12):
         if capacity > 0:
             self.amount = 0
-            self.capacity = 0
+            self.space = capacity
         else:
             raise ValueError
 
@@ -16,7 +16,7 @@ class Jar:
         print("🍪" * self.amount)
 
     def deposit(self, n):
-        if n > 0 and self.amount+n <= self.capacity:
+        if n > 0 and self.amount+n <= self.space:
             self.amount += n
         else:
             raise ValueError
@@ -29,7 +29,7 @@ class Jar:
 
     @property
     def capacity(self):
-        return self.capacity
+        return self.space
 
     @property
     def size(self):
