@@ -6,10 +6,20 @@
 
 from fpdf import FPDF
 
-class shirt(FPDF):
-    def __init__(self, name):
-        if is_integer(capacity) and int(capacity) > 0:
-            self.amount = 0
-            self.space = int(capacity)
-        else:
-            raise ValueError
+def make_shirt(name)
+    pdf = FPDF()
+    pdf.add_page()
+    pdf.set_font("helvetica", "B", 16)
+    pdf.cell(40, 10, name)
+    pdf.output("shirtificate.pdf")
+
+def main():
+    name = input("Enter name: ").strip()
+
+    if name.len() > 0:
+        make_shirt(name)
+    else:
+        exit()
+
+if __name__ == "__main__":
+    main()
