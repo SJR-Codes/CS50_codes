@@ -43,5 +43,5 @@ def f(*args, **kwargs):
     print("Named:", kwargs)
 
 f(100,50,25,5)
-nuts=25, galleons=100, sickles=50
-f(coins)
+f(knuts=25, galleons=100, sickles=50)
+f(**coins)
