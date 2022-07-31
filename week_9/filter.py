@@ -40,7 +40,11 @@ for student in students:
     gryffs.append({"name": student, "house": "Gryffindor"})
 """
 
-gryffs = [{"name": student, "house": "Gryffindor"} for student in students]
+#gryffs = [{"name": student, "house": "Gryffindor"} for student in students]
+
+#dictionary comprehension
+
+gryffs = {student: "Gryffindor" for student in students}
 
 
 print(gryffs)
