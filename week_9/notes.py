@@ -4,8 +4,6 @@
 * by Samu Reinikainen 31.07.2022
 """
 
-#datatype: set
-
 students = [
     {"name": "Hermione", "house": "Gryffindor"},
     {"name": "Harry", "house": "Gryffindor"},
@@ -25,6 +23,8 @@ for house in sorted(houses):
     print house
 """
 
+
+#datatype: set 
 #easier with sets
 houses = set()
 
