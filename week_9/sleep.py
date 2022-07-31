@@ -7,12 +7,15 @@
 def main():
     n = int(input("Give n: "))
 
-    for i in range(n):
-        print("🐑" * (i+1))
+    for s in sheep(n):
+        print(s)
 
 def sheep(n):
+    flock = []
     for i in range(n):
-        print("🐑" * (i+1))
+        flock.append("🐑" * (i+1))
+
+    return flock
 
 if __name__ == "__main__":
     main()
