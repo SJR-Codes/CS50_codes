@@ -5,7 +5,7 @@
 """
 
 #pip install mypy
-
+#use mypy type_hints.py to error checks
 
 
 MIAUS = 3
@@ -16,5 +16,6 @@ def miau(n: int):
     for _ in range(n):
         print("Miau!")
 
-numb = input("Number: ")
+#type hints can be used outside of function arguments
+numb: int = int(input("Number: "))
 miau(numb)
