@@ -26,7 +26,7 @@ def main():
     for s in sheep(n):
         print(s)
 
-#using generators, yield
+#using generators, yield, iterators
 def sheep(n):
     for i in range(n):
         yield "🐑" * (i+1)
