@@ -36,8 +36,8 @@ print(total(coins["galleons"], coins["sickles"], coins["knuts"]), "Knuts")
 print(total(**coins), "Knuts")
 
 #variable number positional or named arguments to functions
-#*args = positional
-#**kwargs = keyword arguments
+#*args (or *somename) = positional
+#**kwargs (or **somename) = keyword arguments
 def f(*args, **kwargs):
     print("Positional:", args)
     print("Named:", kwargs)
