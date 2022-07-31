@@ -4,7 +4,15 @@
 * by Samu Reinikainen 31.07.2022
 """
 
-n = int(input("Give n: "))
+def main():
+    n = int(input("Give n: "))
 
-for i in range(n):
-    print("🐑" * (i+1))
+    for i in range(n):
+        print("🐑" * (i+1))
+
+def sheep(n):
+    for i in range(n):
+        print("🐑" * (i+1))
+
+if __name__ == "__main__":
+    main()
