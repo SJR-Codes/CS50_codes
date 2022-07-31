@@ -20,5 +20,5 @@ coins = [100,50,25]
 #the hard way
 #print(total(coins[0],coins[1],coins[2]), "Knuts")
 
-#unpacking way
-print(total(coins), "Knuts")
+#unpacking way with *
+print(total(*coins), "Knuts")
