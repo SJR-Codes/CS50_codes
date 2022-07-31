@@ -46,5 +46,17 @@ for student in students:
 
 gryffs = {student: "Gryffindor" for student in students}
 
-
 print(gryffs)
+
+for student in students:
+    print(student)
+
+for i in range(len(students)):
+    print(i+1, students[i])
+
+#using enumerate
+for i, student in enumerate(students):
+    print(i+1, student)
+
+
+#generators
