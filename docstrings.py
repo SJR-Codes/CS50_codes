@@ -4,7 +4,11 @@
 * by Samu Reinikainen 30.07.2022
 """
 
-#document functions with docstrings for creating documentation
+#document functions with docstrings for creating documentation ie. with sphinx
+
+# Uses Sphinx docstring format
+
+
 def miau(n: int) -> str:
     """
     Returns string "Miau! " n number of times.
