@@ -23,12 +23,17 @@ miau(numb)
 
 """
 
+"""
 #type hinting functions return value
 def miau(n: int) -> None:
     for _ in range(n):
         print("Miau!")
+###
+"""
 
-#type hints can be used outside of function arguments
+def miau(n: int) -> str:
+    return "Miau! " * n
+
 numb: int = int(input("Number: "))
 miaus: str = miau(numb)
 
