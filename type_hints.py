@@ -9,9 +9,10 @@
 
 
 MIAUS = 3
-
+"""
 #type hint n as int "n: int"
 #python itself does not care about type hints but they help error checking with ie. mypy
+
 def miau(n: int):
     for _ in range(n):
         print("Miau!")
@@ -19,3 +20,15 @@ def miau(n: int):
 #type hints can be used outside of function arguments
 numb: int = int(input("Number: "))
 miau(numb)
+
+"""
+
+def miau(n: int):
+    for _ in range(n):
+        print("Miau!")
+
+#type hints can be used outside of function arguments
+numb: int = int(input("Number: "))
+miaus: str = miau(numb)
+
+print(miaus)
