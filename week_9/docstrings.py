@@ -1,7 +1,7 @@
 """
-* CS50P Problem Set 8
+* CS50P Problem Set 9
 * Notes week 9: Docstrings
-* by Samu Reinikainen 30.07.2022
+* by Samu Reinikainen 31.07.2022
 """
 
 #document functions with docstrings for creating documentation ie. with sphinx

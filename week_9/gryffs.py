@@ -1,7 +1,7 @@
 """
-* CS50P Problem Set 8
+* CS50P Problem Set 9
 * Notes week 9: conditional list comprehension, filter
-* by Samu Reinikainen 30.07.2022
+* by Samu Reinikainen 31.07.2022
 """
 
 
@@ -24,7 +24,8 @@ for gryff in sorted(gryffs):
 def is_gryff(s):
     return s["house"] == "Gryffindor"
 
-gryffs = filter(is_gryffindor, students)
+gryffs = filter(is_gryff, students)
 
-for gryff in sorted(gryffs):
-    print(gryff)
+#sorting dictionary with lambda keys
+for gryff in sorted(gryffs, key=lambda s: s["name"]):
+    print(gryff["name"])
