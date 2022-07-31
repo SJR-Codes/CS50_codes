@@ -36,6 +36,5 @@ print(total(coins["galleons"], coins["sickles"], coins["knuts"]), "Knuts")
 print(total(**coins), "Knuts")
 
 #variable number variables to functions
-
 def var_total(galleons, sickles, knuts):
     return (galleons * 17 +  sickles) * 29 + knuts
