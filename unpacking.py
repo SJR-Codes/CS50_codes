@@ -34,3 +34,8 @@ print(total(coins["galleons"], coins["sickles"], coins["knuts"]), "Knuts")
 
 #unpacking dictionary to named variables with **
 print(total(**coins), "Knuts")
+
+#variable number variables to functions
+
+def var_total(galleons, sickles, knuts):
+    return (galleons * 17 +  sickles) * 29 + knuts
