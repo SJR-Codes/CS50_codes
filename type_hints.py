@@ -31,6 +31,7 @@ def miau(n: int) -> None:
 ###
 """
 
+#type hinting functions return value
 def miau(n: int) -> str:
     return "Miau! " * n
 
