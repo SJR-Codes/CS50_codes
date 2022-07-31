@@ -25,9 +25,9 @@ print(total(*coins), "Knuts")
 """
 
 #named variables
-print(total(galleons=100, sickles=50, knuts=25), "Knuts")
+print(total(knuts=25, galleons=100, sickles=50), "Knuts")
 
-coins = {"sickles": 50, "galleons": 100, "knuts": 25}
+coins = {"sickles": 50, "galleons": 100, "knuts": 25"}
 
 #hard way
 print(total(coins["galleons"], coins["sickles"], coins["knuts"]), "Knuts")
