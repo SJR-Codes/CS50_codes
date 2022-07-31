@@ -29,3 +29,18 @@ gryffs = filter(is_gryff, students)
 #sorting dictionary with lambda keys
 for gryff in sorted(gryffs, key=lambda s: s["name"]):
     print(gryff["name"])
+
+
+students = ["Hermione","Harry","Ron"]
+
+"""
+gryffs = []
+
+for student in students:
+    gryffs.append({"name": student, "house": "Gryffindor"})
+"""
+
+gryffs = [{"name": student, "house": "Gryffindor"} for student in students]
+
+
+print(gryffs)
