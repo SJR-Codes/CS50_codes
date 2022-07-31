@@ -23,7 +23,8 @@ miau(numb)
 
 """
 
-def miau(n: int):
+#type hinting functions return value
+def miau(n: int) -> None:
     for _ in range(n):
         print("Miau!")
 
