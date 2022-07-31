@@ -22,9 +22,9 @@ else:
 import argparse
 
 parser = argparse.ArgumentParser()
-parser.add_argument("-n", default help="number of times to miau")
+parser.add_argument("-n", default=1, help="number of times to miau", type=int)
 args = parser.parse_args()
 
-if args.n:
-    for _ in range(int(args.n)):
-        print("Miau!")
+
+for _ in range(int(args.n)):
+    print("Miau!")
