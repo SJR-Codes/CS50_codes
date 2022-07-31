@@ -1,6 +1,6 @@
 """
 * CS50P Problem Set 8
-* Notes week 9: using named command line arguments
+* Notes week 9: using named command line arguments and argparse
 * by Samu Reinikainen 30.07.2022
 """
 
