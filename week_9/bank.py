@@ -25,7 +25,7 @@ def withdraw(n):
     global balance
     balance -= n
 """
-
+#bypass global-variable hassle with OOP
 class Account():
     def __init__(self):
         self._balance = 0
