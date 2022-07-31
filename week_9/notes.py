@@ -1,7 +1,7 @@
 """
 * CS50P Problem Set 8
 * week 9 notes
-* by Samu Reinikainen 30.07.2022
+* by Samu Reinikainen 31.07.2022
 """
 
 #datatype: set
