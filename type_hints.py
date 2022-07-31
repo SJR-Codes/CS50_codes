@@ -11,7 +11,7 @@
 MIAUS = 3
 
 #type hint n as int "n: int"
-#python does not care about type hints
+#python itself does not care about type hints
 def miau(n: int):
     for _ in range(n):
         print("Miau!")
