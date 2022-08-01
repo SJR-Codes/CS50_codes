@@ -4,5 +4,5 @@
 * by Samu Reinikainen 01.08.2022
 """
 
-import PIL
-import Tk
+from PIL import Image, ImageTk
+import tkinter as tk
