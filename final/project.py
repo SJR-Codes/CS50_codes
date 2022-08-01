@@ -16,12 +16,12 @@ class App(tk.Frame):
 
 
 def main():
-    myapp = App()
-    myapp.master.title("My Do-Nothing Application")
-    myapp.master.maxsize(1000, 400)
+    #myapp = App()
+    #myapp.master.title("My Do-Nothing Application")
+    #myapp.master.maxsize(1000, 400)
 
     # start the program
-    myapp.mainloop()
+    #myapp.mainloop()
 
     engine = pyttsx3.init()
     engine.say("We'll, um, hi, um, hello")
