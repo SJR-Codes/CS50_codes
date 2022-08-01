@@ -8,11 +8,24 @@ from PIL import Image, ImageTk
 import tkinter as tk
 import pyttsx3
 
-def main():
-    n = int(input("Give n: "))
+class App(tk.Frame):
+    def __init__(self, master=None):
+        super().__init__(master)
+        self.pack()
 
-    for s in sheep(n):
-        print(s)
+
+
+def main():
+    myapp = App()
+    myapp.master.title("My Do-Nothing Application")
+    myapp.master.maxsize(1000, 400)
+
+    # start the program
+    myapp.mainloop()
+
+    engine = pyttsx3.init()
+    engine.say("We'll, um, hi, um, hello")
+    engine.runAndWait()
 
 
 
