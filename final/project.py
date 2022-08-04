@@ -104,7 +104,7 @@ def view_slide(c, ctitle, title, ctext, text, image, speak=False):
     if image:
         img = get_image(image)
         if img:
-            c.create_image(20, 240, anchor="nw", image=img)
+            c.create_image(512, 240, anchor="n", image=img)
     c.update()
 
     if speak:
