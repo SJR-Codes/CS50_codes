@@ -1,7 +1,7 @@
 """
 * CS50P Final project
 * Final Project Representer
-* by Samu Reinikainen 04.08.2022
+* by Samu Reinikainen 01.08.2022
 """
 
 from PIL import Image, ImageTk
@@ -111,12 +111,15 @@ def view_slide(c, ctitle, title, ctext, text, image, speak=False):
         say(speak)
 
 def init_speak():
-    engine = pyttsx3.init()
-    engine.setProperty("rate", 250)
-    engine.setProperty("voice", "english-us+f5")
-    #engine.setProperty("voice", "finnish")
+    try:
+        engine = pyttsx3.init()
+        engine.setProperty("rate", 150)
+        engine.setProperty("voice", "english-us+f5")
+        #engine.setProperty("voice", "finnish")
 
-    return engine
+        return engine
+    except:
+        exit("Error: speach synthetizer not found")
 
 def say(text):
     global engine
