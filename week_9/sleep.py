@@ -27,6 +27,8 @@ def main():
         print(s)
 
 #using generators, yield, iterators
+#if printing millions of sheep, normal return stalls comp 'cause it's trying to return million * million sheep
+#yield returns 1 row at time
 def sheep(n):
     for i in range(n):
         yield "🐑" * (i+1)
