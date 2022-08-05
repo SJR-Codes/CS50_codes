@@ -1,7 +1,7 @@
 """
 * CS50P Final project
 * Final Project Representer
-* by Samu Reinikainen 01.08.2022
+* by Samu Reinikainen 05.08.2022
 """
 
 from PIL import Image, ImageTk
@@ -9,42 +9,92 @@ import tkinter as tk
 import pyttsx3
 import time
 import ast
+import argparse
+
+class Fpr:
+    def __init__(self, title, width=1024, height=768):
+        self.engine = init_speak()
+        self.w = tk.Tk()
+        self.w.geometry(f"{width}x{height}")
+        self.width = width
+        self.height = height
+        self.w.title(title)
+
+        self.c = tk.Canvas(self.w, bg = '#f0d8c5')
+        self.c.pack(fill="both", expand=True)
+
+        font = "Times 60 italic bold"
+        self.ctitle = self.c.create_text(self.width/2, 100, fill="#111354", font=font, justify="center")
+
+        font = "Times 30"
+        self.ctext = self.c.create_text(self.width/2, 300, fill="#111354", font=font, justify="center", width=self.width-20)
+        
+    def slideshow(self, slides):
+        for slide in slides:
+            speak = slide.get("speak", False)
+            title = slide.get("title", False)
+            text = slide.get("text", False)
+            image = slide.get("image", False)
+            pause = slide.get("pause", 0)
+
+            self.view_slide(title, text, image, speak)
+
+            time.sleep(pause)
+            
+    def view_slide(self, title, text, image, speak=False):
+        if title != False:
+            self.c.itemconfig(self.ctitle, text=title)
+        if text != False:
+            self.c.itemconfig(self.ctext, text=text)
+        if image:
+            img = get_pimage(image)
+            if img:
+                self.c.create_image(self.width/2, 240, anchor="n", image=img)
+        self.c.update()
+
+        if speak:
+            say(self.engine, speak)
+
 
 def main():
-    global engine
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-f", default="script.txt", help="Script filename", type=str)
+    parser.add_argument("-ww", default=1024, help="Window width", type=int)
+    parser.add_argument("-wh", default=768, help="Window height", type=int)
+    args = parser.parse_args()
 
-    slides = get_script()
+    slides = get_script(args.f)
 
-    width = 1024
-    height = 768
+    fpr = Fpr("Final Project Representer", args.ww, args.wh)
+    fpr.slideshow(slides)
+    fpr.w.mainloop()
 
-    w = window("Final Project Representer", width, height)
-    c = canvas(w)
-
-    engine = init_speak()
-
-    slideshow(c, slides)
-
-    w.mainloop()
-
-def get_image(filen: str) -> object:
+def get_pimage(filen: str) -> object:
     """
     Open filepath and return pillow image object.
 
     :param filen: filepath
     :type filen: str
-    :raise FileNotFoundError: If n is not found or is not image file
     :return: Photoimage image object
     :rtype: object
     """
-    #img = ImageTk.PhotoImage(Image.open("ball.png"))  
-    #canvas.create_image(20, 20, anchor=NW, image=img) 
+    
     try:
         return ImageTk.PhotoImage(Image.open(filen))
     except FileNotFoundError:
         return False
 
-def get_script(filen="script.txt"):
+def get_script(filen: str) -> dict:
+    """
+    Open filepath and return script as dictionary.
+
+    :param filen: filepath
+    :type filen: str
+    :exit: If filen is not found or file is not valid
+    :return: script as dictionary
+    :rtype: dict
+    """
+    
     try:
         with open(filen, "r") as file:
             script = ""
@@ -58,59 +108,14 @@ def get_script(filen="script.txt"):
     except SyntaxError:
         exit("Error: script syntax malformed")
 
-def window(title, width=1024, height=768):
-    w = tk.Tk()
-    w.geometry(f"{width}x{height}")
-    w.title(title)
-
-    return w
-
-def canvas(w):
-    c = tk.Canvas(w, bg = '#f0d8c5')
-    c.pack(fill="both", expand=True)
+def init_speak() -> object:
+    """
+    Initialize speach synthetizer
     
-    return c
-
-def canv_title(canv, width=1024):
-    font = "Times 60 italic bold"
-
-    return canv.create_text(width/2, 100, fill="#111354", font=font, justify="center")
-
-def canv_text(canv, width=1024):
-    font = "Times 30"
-
-    return canv.create_text(width/2, 300, fill="#111354", font=font, justify="center", width=width-20)
-
-def slideshow(c, slides):
-    ctitle = canv_title(c)
-    ctext = canv_text(c)
-
-    for slide in slides:
-        speak = slide.get("speak", False)
-        title = slide.get("title", False)
-        text = slide.get("text", False)
-        image = slide.get("image", False)
-        pause = slide.get("pause", 0)
-
-        view_slide(c, ctitle, title, ctext, text, image, speak)
-
-        time.sleep(pause)
-
-def view_slide(c, ctitle, title, ctext, text, image, speak=False):
-    if title:
-        c.itemconfig(ctitle, text=title)
-    if text:
-        c.itemconfig(ctext, text=text)
-    if image:
-        img = get_image(image)
-        if img:
-            c.create_image(512, 240, anchor="n", image=img)
-    c.update()
-
-    if speak:
-        say(speak)
-
-def init_speak():
+    :raise Error: If speach synthetizer not found
+    :return: Pyttsx3 speach engine
+    :rtype: object
+    """
     try:
         engine = pyttsx3.init()
         engine.setProperty("rate", 150)
@@ -121,12 +126,19 @@ def init_speak():
     except:
         exit("Error: speach synthetizer not found")
 
-def say(text):
-    global engine
+def say(engine: object, text: str):
+    """
+    Speak given text.
+
+    :param engine: string to speak
+    :type engine: object
+    :param text: string to speak
+    :type text: str
+    :return: None
+    """
 
     engine.say(text)
     engine.runAndWait()
-    #time.sleep(2)
 
 if __name__ == "__main__":
     main()
