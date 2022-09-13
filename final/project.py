@@ -28,7 +28,7 @@ class Fpr:
 
         font = "Times 30"
         self.ctext = self.c.create_text(self.width/2, 300, fill="#111354", font=font, justify="center", width=self.width-20)
-        
+
     def slideshow(self, slides):
         for slide in slides:
             speak = slide.get("speak", False)
@@ -40,14 +40,14 @@ class Fpr:
             self.view_slide(title, text, image, speak)
 
             time.sleep(pause)
-            
+
     def view_slide(self, title, text, image, speak=False):
         if title != False:
             self.c.itemconfig(self.ctitle, text=title)
         if text != False:
             self.c.itemconfig(self.ctext, text=text)
         if image:
-            img = get_pimage(image)
+            img = get_pimage(get_image(image))
             if img:
                 self.c.create_image(self.width/2, 240, anchor="n", image=img)
         self.c.update()
@@ -69,20 +69,35 @@ def main():
     fpr.slideshow(slides)
     fpr.w.mainloop()
 
-def get_pimage(filen: str) -> object:
+def get_image(filen: str) -> object:
     """
-    Open filepath and return pillow image object.
+    Open filepath and return PIL image object.
 
     :param filen: filepath
     :type filen: str
+    :return: PIL image object
+    :rtype: object
+    """
+    if filen:
+        try:
+            Image.open(filen)
+        except FileNotFoundError:
+            return False
+
+def get_pimage(img: object) -> object:
+    """
+    Open filepath and return tkinter photoimage object.
+
+    :param img: pillow image object
+    :type filen: object
     :return: Photoimage image object
     :rtype: object
     """
-    
-    try:
-        return ImageTk.PhotoImage(Image.open(filen))
-    except FileNotFoundError:
-        return False
+    if img:
+        try:
+            return ImageTk.PhotoImage(img)
+        except:
+            return False
 
 def get_script(filen: str) -> dict:
     """
@@ -94,24 +109,25 @@ def get_script(filen: str) -> dict:
     :return: script as dictionary
     :rtype: dict
     """
-    
-    try:
-        with open(filen, "r") as file:
-            script = ""
-            for line in file:
-                script += line.strip()
-    except FileNotFoundError:
-        exit("Error: script file not found")
-           
-    try:
-        return ast.literal_eval(script)
-    except SyntaxError:
-        exit("Error: script syntax malformed")
+
+    if filen:
+        try:
+            with open(filen, "r") as file:
+                script = file.read().replace('\n', '')
+        except FileNotFoundError:
+            exit("Error: script file not found")
+        except UnicodeDecodeError:
+            exit("Error: script file not valid file")
+
+        try:
+            return ast.literal_eval(script)
+        except SyntaxError:
+            exit("Error: script syntax malformed")
 
 def init_speak() -> object:
     """
     Initialize speach synthetizer
-    
+
     :raise Error: If speach synthetizer not found
     :return: Pyttsx3 speach engine
     :rtype: object
@@ -137,8 +153,11 @@ def say(engine: object, text: str):
     :return: None
     """
 
-    engine.say(text)
-    engine.runAndWait()
+    try:
+        engine.say(text)
+        engine.runAndWait()
+    except:
+        exit("Error: speach synthetizer not found")
 
 if __name__ == "__main__":
     main()

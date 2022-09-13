@@ -1,10 +1,8 @@
 {   "title": "Welcome :)",
     "text": "",
-    "image": "sample_1.png",
-    "pause": 2
+    "pause": 15
 },
 {   "title": "Welcome :)",
-    "text": "",
     "speak": "Um, hello stranger. Nice of you to be interested.",
     "pause": 1
 },
@@ -14,7 +12,7 @@
     "pause": 1
 },
 {   "title": "Final Project Representer",
-    "text": "by\nSamu Reinikainen\nHelsinki, Finland",
+    "text": "2022\n\nby\n\nSamu Reinikainen\n\nHelsinki, Finland",
     "speak": "Without further ado let me introduce. Um. The Final Project Representer by Samu Reinikainen.",
     "pause": 1
 },
@@ -25,12 +23,13 @@
     "pause": 2
 },
 {   "title": "Sample Script",
+    "text": "",
     "image": "sample_1.png",
     "speak": "As shown here, the script for representation, um, is quite simple. You can add slides with titles, text, images and narration. ",
     "pause": 1
 },
 {   "title": "Sample Script",
-    "image": "sample_2.png",
+    "image": "sample_1.png",
     "speak": "And narrate your speach. With, um, variable pauses in between.",
     "pause": 2
 },
@@ -39,5 +38,7 @@
     "pause": 2
 },
 {   "title": "Goodbye!",
-    "speak": "Over and out"
+    "image": "shirtificate.png",
+    "speak": "Over and out",
+    "pause": 10
 }
